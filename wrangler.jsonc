@@ -1,0 +1,16 @@
+{
+  // Configuración de despliegue en Cloudflare.
+  // Los secretos (SUPABASE_SERVICE_ROLE_KEY) NO van aquí: se cargan en el
+  // panel de Cloudflare como variables de entorno.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "susana-dibre-web",
+  "compatibility_date": "2026-08-31",
+  "main": "worker/index.js",
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
