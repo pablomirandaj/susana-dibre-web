@@ -81,7 +81,7 @@
   },
 
   "supabase": {
-    "url": "https://rwupkpfdjpeqasadeyxm.supabase.co/rest/v1/",
+    "url": "https://rwupkpfdjpeqasadeyxm.supabase.co",
     "anon_key": "sb_publishable_A-WaK7iqLS-mOeq-Wjirzg_sCjq5TL7"
   }
 }
