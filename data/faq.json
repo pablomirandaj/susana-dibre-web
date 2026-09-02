@@ -1,0 +1,103 @@
+{
+  "_note": "Toda respuesta debe apoyarse en informacion verificada. Si no se sabe, la respuesta remite al centro. Las marcadas review:true deben validarse con el negocio antes de publicar.",
+  "items": [
+    {
+      "id": "reservar",
+      "q": "¿Cómo reservo una cita?",
+      "a": "Desde el botón de reservar de esta web, que abre la agenda del centro en Booksy. Ahí se ve la disponibilidad real y se confirma la cita al momento. También se puede reservar por teléfono.",
+      "tags": ["reserva", "cita", "booksy", "agenda", "pedir hora"],
+      "category": "Reservas",
+      "review": false
+    },
+    {
+      "id": "cancelar",
+      "q": "¿Puedo cancelar o cambiar mi cita?",
+      "a": "Sí, desde la propia reserva de Booksy o llamando al centro. Las condiciones y plazos de cancelación los fija el centro: consúltalos al reservar.",
+      "tags": ["cancelar", "anular", "cambiar", "modificar", "aplazar"],
+      "category": "Reservas",
+      "review": true
+    },
+    {
+      "id": "primera-vez",
+      "q": "Es mi primera vez, ¿por dónde empiezo?",
+      "a": "Por la valoración inicial: 40 minutos, 30 €. Es una consulta en la que se analiza tu caso y se propone un plan adaptado, en lugar de elegir un tratamiento a ciegas.",
+      "tags": ["primera", "empezar", "valoracion", "consulta", "no se que hacerme"],
+      "category": "Tratamientos",
+      "review": false
+    },
+    {
+      "id": "donde",
+      "q": "¿Dónde estáis?",
+      "a": "En Av. del Llano, 27, bajo, 33209 Gijón.",
+      "tags": ["donde", "direccion", "ubicacion", "llegar", "calle", "gijon"],
+      "category": "El centro",
+      "review": false
+    },
+    {
+      "id": "horario",
+      "q": "¿Qué horario tenéis?",
+      "a": "De lunes a viernes, de 10:00 a 14:00 y de 16:00 a 20:00. Sábados y domingos, cerrado.",
+      "tags": ["horario", "abierto", "cerrado", "hora", "sabado", "domingo"],
+      "category": "El centro",
+      "review": true
+    },
+    {
+      "id": "precios",
+      "q": "¿Cuánto cuestan los tratamientos?",
+      "a": "Cada tratamiento tiene su precio publicado en esta web y en Booksy. Los rituales van de 120 € a 220 €, los masajes de 50 € a 80 €, y los faciales de 50 € a 130 €. La depilación láser depende de la zona.",
+      "tags": ["precio", "cuesta", "cuanto", "tarifa", "coste"],
+      "category": "Tratamientos",
+      "review": false
+    },
+    {
+      "id": "duracion",
+      "q": "¿Cuánto dura cada sesión?",
+      "a": "Depende del tratamiento. Los masajes y faciales suelen durar entre 30 minutos y una hora y media; la micropigmentación, unas tres horas. La duración exacta aparece junto a cada servicio.",
+      "tags": ["dura", "duracion", "tiempo", "minutos", "cuanto tarda"],
+      "category": "Tratamientos",
+      "review": false
+    },
+    {
+      "id": "cosmetica",
+      "q": "¿Qué cosmética usáis?",
+      "a": "Cosmética ecológica Alqvimia y alta cosmética francesa Matis.",
+      "tags": ["cosmetica", "productos", "marcas", "alqvimia", "matis", "ecologico", "natural"],
+      "category": "El centro",
+      "review": false
+    },
+    {
+      "id": "quien",
+      "q": "¿Quién realiza los tratamientos?",
+      "a": "El equipo del centro: Susana Diez, Lorena y Yeffrey. Al reservar en Booksy puedes elegir profesional.",
+      "tags": ["quien", "profesional", "equipo", "persona", "elegir"],
+      "category": "El centro",
+      "review": false
+    },
+    {
+      "id": "bonos",
+      "q": "¿Hay bonos o tarjetas regalo?",
+      "a": "Sí. El centro tiene bonos de sesiones y tarjetas regalo disponibles a través de Booksy.",
+      "tags": ["bono", "bonos", "regalo", "tarjeta", "packs", "sesiones"],
+      "category": "Reservas",
+      "review": false
+    },
+    {
+      "id": "parking",
+      "q": "¿Hay aparcamiento cerca?",
+      "a": "PENDIENTE DE CONFIRMAR CON EL NEGOCIO.",
+      "tags": ["parking", "aparcar", "coche", "aparcamiento"],
+      "category": "El centro",
+      "review": true,
+      "draft": true
+    },
+    {
+      "id": "preparacion",
+      "q": "¿Tengo que prepararme antes de la sesión?",
+      "a": "PENDIENTE DE CONFIRMAR CON EL NEGOCIO. Depende del tratamiento, especialmente en láser y micropigmentación.",
+      "tags": ["preparacion", "antes", "preparar", "afeitar", "sol"],
+      "category": "Tratamientos",
+      "review": true,
+      "draft": true
+    }
+  ]
+}

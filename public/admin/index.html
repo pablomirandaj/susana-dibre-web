@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel · Susana Dibré</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ------------------------------------------------------------- acceso -->
+<section id="acceso" class="acceso" hidden>
+  <div class="acceso__caja">
+    <h1>Panel de Susana Dibré</h1>
+    <p class="tenue">Acceso restringido al negocio.</p>
+    <form id="form-login">
+      <label for="email">Correo</label>
+      <input id="email" type="email" autocomplete="username" required>
+      <label for="pass">Contraseña</label>
+      <input id="pass" type="password" autocomplete="current-password" required>
+      <button class="btn btn--primario" type="submit">Entrar</button>
+      <p class="error" id="error-login" hidden></p>
+    </form>
+  </div>
+</section>
+
+<!-- -------------------------------------------------------------- panel -->
+<div id="panel" hidden>
+  <header class="tope">
+    <div class="tope__fila">
+      <strong>Susana Dibré</strong>
+      <nav class="pestanas" id="pestanas">
+        <button class="activa" data-vista="resumen">Resumen</button>
+        <button data-vista="contenido">Contenido</button>
+        <button data-vista="faq">Preguntas</button>
+        <button data-vista="informes">Informes</button>
+      </nav>
+      <span class="tenue" id="quien"></span>
+      <button class="btn btn--texto" id="salir">Salir</button>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <!-- ------------------------------------------------------- resumen -->
+    <section data-vista="resumen">
+      <div class="titular">
+        <div>
+          <h2>Rendimiento digital</h2>
+          <p class="tenue" id="periodo">Cargando…</p>
+        </div>
+        <select id="mes" aria-label="Mes"></select>
+      </div>
+
+      <div id="estado-resumen" class="estado">Cargando datos…</div>
+
+      <div class="kpis" id="kpis" hidden></div>
+
+      <div class="dos-columnas">
+        <div class="tarjeta">
+          <h3>Tratamientos más consultados</h3>
+          <div id="servicios" class="estado">Sin datos todavía.</div>
+        </div>
+        <div class="tarjeta">
+          <h3>De dónde llegan las visitas</h3>
+          <div id="origen" class="estado">Sin datos todavía.</div>
+        </div>
+      </div>
+
+      <div class="tarjeta">
+        <h3>Últimos 6 meses</h3>
+        <div id="historico" class="estado">Sin datos todavía.</div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------- contenido -->
+    <section data-vista="contenido" hidden>
+      <div class="titular"><h2>Fotografías de la web</h2></div>
+      <p class="tenue" style="max-width:60ch">Solo aparecen en la web las fotos marcadas como publicadas. Añade la dirección de una imagen ya subida (por ejemplo, desde Supabase Storage) y decide si se publica.</p>
+
+      <form id="form-foto" class="fila-form">
+        <input id="foto-url" type="url" placeholder="https://…/foto.webp" required>
+        <input id="foto-alt" type="text" placeholder="Descripción de la imagen (accesibilidad)" required>
+        <button class="btn btn--primario" type="submit">Añadir</button>
+      </form>
+
+      <div id="galeria" class="estado">Cargando…</div>
+    </section>
+
+    <!-- ----------------------------------------------------------- faq -->
+    <section data-vista="faq" hidden>
+      <div class="titular"><h2>Preguntas frecuentes</h2></div>
+      <form id="form-faq" class="fila-form fila-form--vertical">
+        <input id="faq-p" type="text" placeholder="Pregunta" required>
+        <textarea id="faq-r" rows="3" placeholder="Respuesta" required></textarea>
+        <button class="btn btn--primario" type="submit">Guardar pregunta</button>
+      </form>
+      <div id="lista-faq" class="estado">Cargando…</div>
+    </section>
+
+    <!-- ------------------------------------------------------ informes -->
+    <section data-vista="informes" hidden>
+      <div class="titular"><h2>Informes mensuales</h2></div>
+      <p class="tenue" style="max-width:60ch">Cada mes se guarda una foto fija de los resultados. Los porcentajes salen del cálculo directo sobre los datos, no de una estimación.</p>
+      <div id="informes" class="estado">Cargando…</div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

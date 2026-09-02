@@ -1,0 +1,296 @@
+/* =========================================================================
+   Susana Dibré — hoja de estilo única
+   Dirección artística: centro ecológico de estética integral, Gijón.
+   Verde botánico profundo + piedra caliza fría + miel (cosmética Alqvimia).
+   Tipografía: Fraunces (display) + Karla (texto).
+   ========================================================================= */
+
+:root {
+  --tinta:      #12211B;
+  --bosque:     #1B3729;
+  --musgo:      #4B6B55;
+  --piedra:     #E5E5DD;
+  --papel:      #F7F7F3;
+  --miel:       #A97822;
+  --miel-claro: #D9B25E;
+  --linea:      rgba(18, 33, 27, .16);
+  --linea-clara: rgba(247, 247, 243, .22);
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans:  "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --medida: 66ch;
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --ritmo: clamp(4rem, 9vw, 8rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -.015em;
+  margin: 0;
+  font-variation-settings: "SOFT" 20, "WONK" 1;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--miel);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap { width: min(1180px, 100%); margin-inline: auto; padding-inline: var(--gutter); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.saltar {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--bosque); color: var(--papel); padding: .75rem 1rem;
+}
+.saltar:focus { left: 0; }
+
+/* ---------------------------------------------------------------- cabecera */
+.cabecera {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--papel);
+  border-bottom: 1px solid var(--linea);
+}
+.cabecera__fila {
+  display: flex; align-items: center; gap: 1.5rem;
+  min-height: 68px;
+}
+.marca {
+  font-family: var(--serif); font-size: 1.3rem; letter-spacing: -.02em;
+  text-decoration: none; margin-right: auto; white-space: nowrap;
+}
+.marca span { display: block; font-family: var(--sans); font-size: .68rem; letter-spacing: .1em; color: var(--musgo); text-transform: uppercase; }
+
+.nav { display: flex; gap: 1.6rem; }
+.nav a {
+  text-decoration: none; font-size: .95rem; color: var(--tinta);
+  padding-block: .35rem; border-bottom: 1px solid transparent;
+}
+.nav a:hover { border-bottom-color: var(--miel); }
+
+.menu-btn { display: none; background: none; border: 1px solid var(--linea); padding: .5rem .8rem; font: inherit; font-size: .9rem; cursor: pointer; }
+
+/* --------------------------------------------------------------- botón cta */
+.btn {
+  display: inline-block; text-decoration: none; font-family: var(--sans);
+  font-size: .95rem; font-weight: 600; letter-spacing: .01em;
+  padding: .78rem 1.35rem; border: 1px solid transparent; cursor: pointer;
+  transition: background-color .18s ease, color .18s ease;
+}
+.btn--miel { background: var(--miel); color: #fff; }
+.btn--miel:hover { background: #8d631a; }
+.btn--linea { border-color: currentColor; background: none; }
+.btn--linea:hover { background: rgba(18,33,27,.06); }
+.btn--claro { border-color: var(--linea-clara); color: var(--papel); background: none; }
+.btn--claro:hover { background: rgba(247,247,243,.1); }
+
+/* -------------------------------------------------------------------- hero */
+.hero { background: var(--bosque); color: var(--papel); padding-block: clamp(3.5rem, 8vw, 6.5rem) clamp(3rem, 7vw, 5.5rem); }
+.hero__grid { display: grid; gap: clamp(2.5rem, 5vw, 4rem); grid-template-columns: 1fr; align-items: end; }
+@media (min-width: 900px) { .hero__grid { grid-template-columns: 1.15fr .85fr; } }
+
+.hero h1 {
+  font-size: clamp(2.6rem, 7.2vw, 4.6rem);
+  max-width: 12ch;
+}
+.hero h1 em { font-style: italic; font-variation-settings: "SOFT" 60, "WONK" 1; }
+.hero__texto { margin: 1.6rem 0 2.2rem; max-width: 46ch; color: rgba(247,247,243,.82); font-size: 1.08rem; }
+.hero__acciones { display: flex; flex-wrap: wrap; gap: .8rem; }
+
+.prueba {
+  margin-top: 2.6rem; padding-top: 1.4rem;
+  border-top: 1px solid var(--linea-clara);
+  display: flex; align-items: baseline; gap: .7rem; flex-wrap: wrap;
+  font-size: .92rem; color: rgba(247,247,243,.72);
+}
+.prueba b { font-family: var(--serif); font-size: 1.9rem; color: var(--miel-claro); font-weight: 400; }
+
+.hero__foto { aspect-ratio: 3 / 4; }
+
+/* ------------------------------------------------------------- marcador de foto */
+.foto-pendiente {
+  display: grid; place-content: center; text-align: center;
+  background: repeating-linear-gradient(135deg, rgba(75,107,85,.14) 0 12px, rgba(75,107,85,.06) 12px 24px);
+  border: 1px dashed var(--musgo);
+  color: var(--musgo); font-size: .8rem; padding: 1rem; line-height: 1.4;
+  min-height: 180px;
+}
+.hero .foto-pendiente { border-color: rgba(247,247,243,.35); color: rgba(247,247,243,.65); }
+
+/* ---------------------------------------------------------------- secciones */
+.seccion { padding-block: var(--ritmo); }
+.seccion--piedra { background: var(--piedra); }
+.seccion__cabeza { display: grid; gap: 1rem; margin-bottom: clamp(2.2rem, 4vw, 3.4rem); }
+@media (min-width: 900px) {
+  .seccion__cabeza { grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+}
+.seccion__cabeza h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); max-width: 16ch; }
+.seccion__cabeza p { margin: 0; max-width: 56ch; color: #3a4a42; }
+
+/* --------------------------------------------------------- relato / centro */
+.relato { display: grid; gap: clamp(2rem, 4vw, 3.5rem); }
+@media (min-width: 900px) { .relato { grid-template-columns: 1.3fr .7fr; } }
+.relato p { max-width: var(--medida); }
+.relato p + p { margin-top: 1.1rem; }
+.relato__marcas { border-left: 2px solid var(--miel); padding-left: 1.2rem; align-self: start; }
+.relato__marcas dt { font-family: var(--serif); font-size: 1.35rem; }
+.relato__marcas dd { margin: .1rem 0 1.2rem; font-size: .93rem; color: var(--musgo); }
+
+/* ------------------------------------------------- carta de servicios */
+.carta__bloque + .carta__bloque { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.carta__titulo {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+  border-bottom: 1px solid var(--linea); padding-bottom: .7rem;
+}
+.carta__titulo h3 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.carta__titulo a { font-size: .9rem; color: var(--musgo); }
+.carta__lead { margin: .7rem 0 1.4rem; color: var(--musgo); font-size: .98rem; max-width: 60ch; }
+
+.lista { list-style: none; margin: 0; padding: 0; }
+.lista li { padding-block: .95rem; border-bottom: 1px dotted var(--linea); }
+.linea-servicio { display: flex; gap: 1rem; align-items: baseline; justify-content: space-between; }
+.linea-servicio__nombre { font-weight: 600; font-size: 1.02rem; }
+.linea-servicio__meta { white-space: nowrap; font-variant-numeric: tabular-nums; font-size: .95rem; }
+.linea-servicio__meta .dur { color: var(--musgo); margin-right: .7rem; }
+.linea-servicio__desc { margin: .3rem 0 0; font-size: .93rem; color: var(--musgo); max-width: 62ch; }
+
+.destacado { display: inline-block; font-size: .7rem; letter-spacing: .06em; color: var(--miel); border: 1px solid var(--miel); padding: .1rem .4rem; margin-left: .5rem; vertical-align: 2px; }
+
+.carta__pie { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.carta__pie p { margin: 0; font-size: .9rem; color: var(--musgo); }
+
+/* --------------------------------------------------------------- primera cita */
+.primera {
+  background: var(--bosque); color: var(--papel);
+  padding: clamp(2rem, 4vw, 3rem); display: grid; gap: 1.5rem;
+}
+@media (min-width: 800px) { .primera { grid-template-columns: 1fr auto; align-items: center; } }
+.primera h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+.primera p { margin: .7rem 0 0; color: rgba(247,247,243,.8); max-width: 52ch; }
+
+/* --------------------------------------------------------------- equipo */
+.equipo { display: flex; flex-wrap: wrap; gap: 2.5rem; }
+.equipo li { list-style: none; }
+.equipo__nombre { font-family: var(--serif); font-size: 1.6rem; }
+
+/* -------------------------------------------------------------- galería */
+.galeria { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+@media (min-width: 760px) { .galeria { grid-template-columns: repeat(4, 1fr); } }
+.galeria > * { aspect-ratio: 1; }
+
+/* ------------------------------------------------------------------- faq */
+.buscador { position: relative; max-width: 30rem; margin-bottom: 2rem; }
+.buscador input {
+  width: 100%; font: inherit; padding: .85rem 1rem;
+  border: 1px solid var(--linea); background: var(--papel); color: inherit;
+}
+.buscador label { display: block; font-size: .9rem; margin-bottom: .45rem; color: var(--musgo); }
+
+.faq { border-top: 1px solid var(--linea); }
+.faq details { border-bottom: 1px solid var(--linea); }
+.faq summary {
+  cursor: pointer; padding: 1.1rem 2rem 1.1rem 0; position: relative;
+  font-weight: 600; list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+"; position: absolute; right: .2rem; top: 50%; transform: translateY(-50%);
+  font-size: 1.3rem; color: var(--musgo); line-height: 1;
+}
+.faq details[open] summary::after { content: "–"; }
+.faq p { margin: 0 0 1.3rem; max-width: var(--medida); color: #3a4a42; }
+.faq [hidden] { display: none; }
+.sin-resultados { padding: 1.5rem 0; color: var(--musgo); }
+
+/* ---------------------------------------------------------------- visita */
+.visita { display: grid; gap: clamp(2rem, 4vw, 3rem); }
+@media (min-width: 900px) { .visita { grid-template-columns: 1fr 1fr; } }
+.datos dt { font-size: .8rem; letter-spacing: .08em; color: var(--musgo); }
+.datos dd { margin: .2rem 0 1.4rem; font-size: 1.05rem; }
+.datos dd a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.horario { list-style: none; margin: 0; padding: 0; max-width: 22rem; }
+.horario li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .4rem; border-bottom: 1px dotted var(--linea); font-size: .96rem; }
+.horario .cerrado { color: var(--musgo); }
+.mapa { border: 0; width: 100%; min-height: 320px; height: 100%; filter: saturate(.75); }
+
+/* ------------------------------------------------------------------- pie */
+.pie { background: var(--bosque); color: rgba(247,247,243,.72); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.pie a { color: var(--papel); }
+.pie__grid { display: grid; gap: 2rem; }
+@media (min-width: 760px) { .pie__grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+.pie h4 { font-family: var(--sans); font-size: .8rem; letter-spacing: .08em; color: var(--miel-claro); margin: 0 0 .8rem; font-weight: 600; }
+.pie ul { list-style: none; margin: 0; padding: 0; }
+.pie li { margin-bottom: .5rem; }
+.pie__legal { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--linea-clara); display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; font-size: .84rem; }
+
+/* --------------------------------------------------- barra móvil de reserva */
+.barra-movil {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  display: none; gap: .6rem; padding: .6rem;
+  background: var(--papel); border-top: 1px solid var(--linea);
+}
+.barra-movil .btn { flex: 1; text-align: center; padding-block: .85rem; }
+@media (max-width: 720px) {
+  .barra-movil { display: flex; }
+  body { padding-bottom: 4.5rem; }
+  .nav { display: none; }
+  .nav--abierto {
+    display: flex; flex-direction: column; gap: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--papel); border-bottom: 1px solid var(--linea); padding: .5rem var(--gutter) 1.2rem;
+  }
+  .nav--abierto a { padding-block: .8rem; border-bottom: 1px solid var(--linea); }
+  .menu-btn { display: block; }
+  .cabecera .btn--miel { display: none; }
+}
+
+/* --------------------------------------------------------- página servicio */
+.migas { font-size: .88rem; color: var(--musgo); padding-block: 1.2rem; }
+.migas a { text-decoration: none; }
+.migas a:hover { text-decoration: underline; }
+.servicio-hero { padding-block: 1rem clamp(2.5rem, 5vw, 4rem); border-bottom: 1px solid var(--linea); }
+.servicio-hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); max-width: 14ch; }
+.servicio-hero p { max-width: var(--medida); margin: 1.3rem 0 2rem; font-size: 1.08rem; }
+
+/* aviso de datos no verificados, solo en desarrollo */
+.aviso-dev {
+  background: #FFF4D6; border-bottom: 1px solid #E0C97A; color: #5a4508;
+  font-size: .85rem; padding: .6rem var(--gutter);
+}
+
+/* utilidades de composición usadas por las plantillas */
+.titulo-seccion { font-size: clamp(1.9rem, 4vw, 2.9rem); max-width: 16ch; margin-bottom: 1.5rem; }
+.pie__marca { font-family: var(--serif); font-size: 1.4rem; color: var(--papel); margin: 0 0 .5rem; }
+.pie__dir { margin: 0; }
+.bloque-suelto { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.nota-larga { max-width: 66ch; }
+.legal h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1.5rem; }
+.nota-arriba { margin-top: 1.2rem; }

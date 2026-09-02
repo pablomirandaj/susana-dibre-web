@@ -1,0 +1,145 @@
+{
+  "_source": "Booksy, perfil 174197 Susana Dibré, consultado 2026-09-02. Precios y duraciones tal cual aparecen publicados. NO editar a mano sin comprobar contra Booksy.",
+  "_note": "Servicios a 'Gratis' en Booksy corresponden a sesiones de bonos ya pagados y NO se muestran en la web publica (excluded:true).",
+
+  "categories": [
+    {
+      "slug": "rituales",
+      "title": "Rituales",
+      "page": true,
+      "lead": "Sesiones largas de cosmética ecológica Alqvimia que combinan trabajo facial y corporal.",
+      "intro": "Los rituales son el formato más largo del centro: entre una hora y hora y media de tratamiento continuado, con cosmética ecológica Alqvimia. Se reservan como sesión suelta, individual o compartida.",
+      "services": [
+        { "name": "Ritual de Alqvimia Harmony", "price": 180, "duration": "1h 30min", "desc": "Ritual facial y corporal de Alqvimia, orientado al equilibrio y la desconexión." },
+        { "name": "Reina de Egipto", "price": 150, "duration": "1h 30min", "desc": "Ritual individual." },
+        { "name": "Oasis de Serenidad", "price": 120, "duration": "1h 30min", "desc": "Ritual individual." },
+        { "name": "Ritual de la Alegría", "price": 120, "duration": "1h 30min", "desc": "Ritual individual." },
+        { "name": "Ritual Espiritual Compartida", "price": 220, "duration": "1h", "desc": "Ritual para dos personas a la vez." }
+      ]
+    },
+    {
+      "slug": "masajes",
+      "title": "Masajes",
+      "page": true,
+      "lead": "Descontracturante, relajante, drenaje linfático, piedras calientes y maderoterapia.",
+      "intro": "Masajes de sesión suelta, de 50 minutos a una hora. El drenaje linfático y la maderoterapia con drenaje brasileño están entre los servicios más reservados del centro.",
+      "services": [
+        { "name": "Maderoterapia + Drenaje Brasileño", "price": 60, "duration": "1h", "desc": "Combina instrumento de madera y drenaje manual para moldear y redefinir la silueta.", "popular": true },
+        { "name": "Drenaje Linfático", "price": 60, "duration": "1h", "desc": "Movimientos suaves y precisos que ayudan a estimular la circulación.", "popular": true },
+        { "name": "Masaje Relajante", "price": 60, "duration": "1h", "desc": "Técnicas suaves para restaurar el equilibrio entre cuerpo y mente." },
+        { "name": "Masaje Descontracturante", "price": 50, "duration": "50min", "desc": "Diseñado para descongestionar el tejido muscular y reducir el estrés físico acumulado." },
+        { "name": "Masaje Piedras Calientes", "price": 80, "duration": "1h", "desc": "Técnicas relajantes con calor terapéutico mediante piedras volcánicas." },
+        { "name": "Masaje Craneal", "price": 50, "duration": "50min", "desc": "Centrado en cabeza, cuero cabelludo, sienes y cuello." }
+      ]
+    },
+    {
+      "slug": "faciales",
+      "title": "Tratamientos faciales",
+      "page": true,
+      "lead": "Cosmética Matis y Alqvimia, limpiezas, radiofrecuencia y Kobido.",
+      "intro": "El centro trabaja con alta cosmética francesa Matis y cosmética ecológica Alqvimia. Los tratamientos se reservan como sesión suelta; la valoración inicial permite decidir cuál corresponde a cada piel.",
+      "services": [
+        { "name": "Tratamiento Caviar Matis", "price": 130, "duration": "1h 30min", "desc": "Pieles maduras. Sesión suelta." },
+        { "name": "Tratamiento Time Global Matis", "price": 130, "duration": "1h 30min", "desc": "Antienvejecimiento. Sesión suelta." },
+        { "name": "FHOS Facial", "price": 120, "duration": "20min", "desc": "Aparatología facial. Sesión suelta." },
+        { "name": "Golden Glow Illuminating", "price": 90, "duration": "1h" },
+        { "name": "Limpieza Facial Alqvimia", "price": 80, "duration": "1h", "desc": "Sesión suelta." },
+        { "name": "Kobido", "price": 80, "duration": "1h", "desc": "Masaje facial japonés. Sesión suelta." },
+        { "name": "Ondas Facial", "price": 70, "duration": "30min", "desc": "Tratamiento no invasivo que estimula el colágeno y mejora la firmeza." },
+        { "name": "Lifting Sublime", "price": 70, "duration": "1h", "desc": "Radiofrecuencia facial. Sesión suelta." },
+        { "name": "Limpieza Facial Matis", "price": 70, "duration": "1h", "desc": "Sesión suelta." },
+        { "name": "Tratamiento Responce Corrective", "price": 70, "duration": "1h", "desc": "Antiedad. Sesión suelta." },
+        { "name": "Tratamiento Responce Delicate", "price": 70, "duration": "1h", "desc": "Pieles sensibles. Sesión suelta." },
+        { "name": "Carbón Activo", "price": 70, "duration": "30min", "desc": "Sesión suelta." },
+        { "name": "Limpieza Facial Básica", "price": 60, "duration": "1h", "desc": "Sesión suelta." },
+        { "name": "Tratamiento Responce Purete", "price": 50, "duration": "1h", "desc": "Pieles grasas. Sesión suelta." }
+      ]
+    },
+    {
+      "slug": "corporal",
+      "title": "Tratamientos corporales",
+      "page": true,
+      "lead": "Aparatología no invasiva: FHOS, ondas de choque, cavitación y lipoláser.",
+      "intro": "Aparatología corporal en sesión suelta o en bono. Las ondas de choque se contratan por número de impulsos; el mantenimiento tiene precio propio.",
+      "services": [
+        { "name": "FHOS Corporal (1 zona)", "price": 120, "duration": "25min", "desc": "Sesión suelta." },
+        { "name": "Ondas de Choque Corporal (45k–60k impulsos)", "price": 110, "duration": "1h 15min", "desc": "Mantenimiento." },
+        { "name": "Ondas de Choque Corporal (30k–45k impulsos)", "price": 90, "duration": "50min", "desc": "Mantenimiento." },
+        { "name": "Ondas de Choque Corporal (20k–30k impulsos)", "price": 70, "duration": "40min", "desc": "Mantenimiento." },
+        { "name": "Cavitación", "price": 60, "duration": "1h", "desc": "Procedimiento estético no invasivo para reducir la grasa localizada." },
+        { "name": "Lipoláser", "price": 60, "duration": "50min", "desc": "Tratamiento no invasivo que actúa donde se acumula la grasa." },
+        { "name": "Ondas de Choque Corporal (12k–20k impulsos)", "price": 50, "duration": "30min", "desc": "Mantenimiento." },
+        { "name": "Manta FHOS Corporal", "price": 50, "duration": "30min" }
+      ]
+    },
+    {
+      "slug": "micropigmentacion",
+      "title": "Micropigmentación",
+      "page": true,
+      "lead": "Cejas y microblading, con diseño previo de la mirada.",
+      "intro": "Sesiones largas, de unas tres horas. El diseño de la mirada se reserva por separado y permite decidir la forma antes de pigmentar.",
+      "services": [
+        { "name": "Micropigmentación Cejas", "price": 300, "duration": "3h", "popular": true },
+        { "name": "Microblading Cejas", "price": 300, "duration": "3h" },
+        { "name": "Repaso Micropigmentación Cejas (después de 1 año)", "price": 300, "duration": "3h" },
+        { "name": "Diseño de la mirada", "price": 15, "duration": "30min" }
+      ]
+    },
+    {
+      "slug": "depilacion-laser",
+      "title": "Depilación láser",
+      "page": true,
+      "lead": "Láser diodo, por zonas o cuerpo entero.",
+      "intro": "Depilación con láser diodo. El precio depende de la zona; existen packs y bonos que se consultan en la valoración inicial.",
+      "services": [
+        { "name": "Cuerpo Entero Hombre Láser", "price": 330, "duration": "1h" },
+        { "name": "Facial Completo Láser (labio + mentón + pómulos + patillas)", "price": 38, "duration": "15min" },
+        { "name": "Labio + Mentón Láser", "price": 22, "duration": "10min" },
+        { "name": "Mentón Láser", "price": 20, "duration": "5min" },
+        { "name": "Labio Láser", "price": 16, "duration": "5min" }
+      ],
+      "more_note": "Booksy publica 21 servicios de depilación láser por zonas. El listado completo y actualizado está en Booksy."
+    },
+    {
+      "slug": "depilacion-cera-hilo",
+      "title": "Depilación con cera e hilo",
+      "page": false,
+      "lead": "Depilación facial y corporal.",
+      "services": [
+        { "name": "Cejas + Labio + Facial Completo (hilo)", "price": 45, "duration": "30min", "desc": "Pack facial completo." },
+        { "name": "Pecho + Abdomen Cera", "price": 40, "duration": "30min" },
+        { "name": "Facial Hilo (patillas + labio + pómulos)", "price": 30, "duration": "30min" },
+        { "name": "Espalda Cera", "price": 25, "duration": "20min" },
+        { "name": "Brazos Cera", "price": 20, "duration": "20min" },
+        { "name": "Cejas + Labio Hilo", "price": 20, "duration": "30min" },
+        { "name": "Cejas Hilo", "price": 15, "duration": "30min", "popular": true },
+        { "name": "Labio Hilo", "price": 10, "duration": "30min" },
+        { "name": "Axilas Cera", "price": 10, "duration": "10min" },
+        { "name": "Labio Cera", "price": 6, "duration": "10min" }
+      ]
+    },
+    {
+      "slug": "pestanas-unas",
+      "title": "Pestañas y pedicura",
+      "page": false,
+      "lead": "Extensiones de pestañas y pedicuras.",
+      "services": [
+        { "name": "1 Puesta Pestañas 2D y 3D", "price": 75, "duration": "2h", "desc": "Puesta nueva." },
+        { "name": "1 Puesta Pestañas Híbridas", "price": 70, "duration": "2h", "desc": "Puesta nueva." },
+        { "name": "1 Puesta Pestañas Clásicas", "price": 60, "duration": "2h", "desc": "Puesta nueva." },
+        { "name": "Retoque Pestañas Híbridas", "price": 40, "duration": "1h 30min" },
+        { "name": "Pedicura Spa", "price": 40, "duration": "1h" },
+        { "name": "Pedicura Permanente", "price": 40, "duration": "1h" },
+        { "name": "Retoque Pestañas Clásicas", "price": 35, "duration": "1h 30min" },
+        { "name": "Pedicura Básica", "price": 30, "duration": "1h" }
+      ]
+    }
+  ],
+
+  "first_visit": {
+    "name": "Valoración inicial",
+    "price": 30,
+    "duration": "40min",
+    "desc": "Evaluación detallada para conocer necesidades y objetivos, y definir un plan adaptado."
+  }
+}

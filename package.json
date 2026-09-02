@@ -1,0 +1,10 @@
+{
+  "name": "susana-dibre-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web y panel de Susana Dibré, centro ecológico de estética integral en Gijón",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --dev && node -e \"const h=require('http'),f=require('fs'),p=require('path');h.createServer((q,s)=>{let u=q.url.split('?')[0];let x=p.join(__dirname,'public',u);if(f.existsSync(x)&&f.statSync(x).isDirectory())x=p.join(x,'index.html');if(!f.existsSync(x)){s.writeHead(404);return s.end('404')}const t={'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.xml':'application/xml'}[p.extname(x)]||'text/plain';s.writeHead(200,{'Content-Type':t+'; charset=utf-8'});s.end(f.readFileSync(x))}).listen(3000,()=>console.log('http://localhost:3000'))\""
+  }
+}

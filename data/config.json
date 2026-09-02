@@ -1,0 +1,87 @@
+{
+  "_comment": "Fuente unica de configuracion del cliente. Cambiar aqui = cambiar la web. Campos con verified:false requieren confirmacion del negocio antes de publicar.",
+
+  "business": {
+    "name": "Susana Dibré",
+    "legal_name": { "value": "SUSANADIEZ BREA", "verified": true, "source": "Booksy" },
+    "tagline": { "value": "Centro ecológico de estética integral", "verified": true, "source": "Booksy (texto propio del negocio)" },
+    "sector": "Estética integral y bienestar",
+    "city": "Gijón",
+    "region": "Asturias",
+    "founded_year": { "value": null, "verified": false, "note": "NO VERIFICADO. No usar en la web hasta confirmarlo." }
+  },
+
+  "contact": {
+    "address": { "value": "Av. del Llano, 27, bajo", "postal_code": "33209", "city": "Gijón", "verified": true, "source": "Booksy + Páginas Amarillas + Fresha" },
+    "phone": { "value": "+34984392280", "display": "984 39 22 80", "verified": false, "source": "Páginas Amarillas, Cylex, Fresha, Sesale (4 fuentes coincidentes)", "note": "Coincide en 4 directorios pero no confirmado por el negocio. CONFIRMAR." },
+    "whatsapp": { "value": null, "verified": false, "note": "NO VERIFICADO. Sin numero confirmado el boton de WhatsApp NO se renderiza. Rellenar con formato +34XXXXXXXXX." },
+    "email": { "value": null, "verified": false },
+    "maps_url": { "value": "https://www.google.com/maps/search/?api=1&query=Susana+Dibr%C3%A9+Av.+del+Llano+27+Gij%C3%B3n", "verified": false, "note": "Enlace de busqueda generico. Sustituir por el enlace corto del perfil real de Google Business." }
+  },
+
+  "hours": {
+    "verified": false,
+    "note": "INFERENCIA. Booksy muestra jornada partida (10-14 / 16-20). Fresha muestra 10-20 continuado. CONFIRMAR con el negocio antes de publicar.",
+    "week": [
+      { "day": "Lunes", "slots": ["10:00–14:00", "16:00–20:00"] },
+      { "day": "Martes", "slots": ["10:00–14:00", "16:00–20:00"] },
+      { "day": "Miércoles", "slots": ["10:00–14:00", "16:00–20:00"] },
+      { "day": "Jueves", "slots": ["10:00–14:00", "16:00–20:00"] },
+      { "day": "Viernes", "slots": ["10:00–14:00", "16:00–20:00"] },
+      { "day": "Sábado", "slots": [] },
+      { "day": "Domingo", "slots": [] }
+    ]
+  },
+
+  "booking": {
+    "provider": "booksy",
+    "url": "https://booksy.com/es-es/174197_susana-dibre_medicina-estetica_76596_gijon",
+    "label": "Reservar en Booksy",
+    "widget": { "enabled": false, "note": "Booksy ofrece boton/widget oficial desde Booksy Biz > Marketing. Si el negocio lo facilita, pegar aqui el snippet y activar. Mientras tanto: enlace directo (Opcion 3 del brief)." }
+  },
+
+  "social": {
+    "instagram": { "value": "https://www.instagram.com/susana_dibre/", "handle": "@susana_dibre", "verified": true, "source": "Booksy" },
+    "facebook": { "value": null, "verified": false }
+  },
+
+  "reputation": {
+    "booksy": { "rating": 5.0, "count": 130, "verified": true, "source": "Booksy, consultado 2026-09-02", "label": "en Booksy" },
+    "google": { "rating": null, "count": null, "verified": false, "note": "Agregadores de terceros mencionan 4,9 pero no esta verificado en Google. NO publicar hasta comprobarlo en el perfil real." }
+  },
+
+  "team": {
+    "verified": true,
+    "source": "Booksy",
+    "members": [
+      { "name": "Susana Diez", "role": null },
+      { "name": "Lorena", "role": null },
+      { "name": "Yeffrey", "role": null }
+    ],
+    "note": "Nombres verificados. Los roles/especialidades NO estan verificados: rellenar con el negocio."
+  },
+
+  "brands": {
+    "verified": true,
+    "source": "Booksy (nombres de servicio) + Paginas Amarillas",
+    "list": ["Alqvimia", "Matis"]
+  },
+
+  "site": {
+    "domain": "https://www.susanadibre.es",
+    "lang_default": "es",
+    "langs": ["es"],
+    "langs_planned": ["en"],
+    "panel_domain": "https://panel.susanadibre.es"
+  },
+
+  "analytics": {
+    "endpoint": "/api/track",
+    "ga4_id": null
+  },
+
+  "supabase": {
+    "url": "",
+    "anon_key": ""
+  }
+}

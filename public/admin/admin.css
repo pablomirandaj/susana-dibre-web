@@ -1,0 +1,90 @@
+:root {
+  --tinta: #12211B;
+  --bosque: #1B3729;
+  --musgo: #5C7365;
+  --borde: #E1E3DE;
+  --fondo: #F6F7F4;
+  --blanco: #fff;
+  --miel: #A97822;
+  --sube: #2E7D4F;
+  --baja: #B2452F;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); color: var(--tinta); font-family: var(--sans); font-size: 15px; line-height: 1.55; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 500; margin: 0; line-height: 1.15; }
+:focus-visible { outline: 2px solid var(--miel); outline-offset: 2px; }
+.tenue { color: var(--musgo); font-size: .9rem; }
+.estado { color: var(--musgo); font-size: .92rem; padding: 1rem 0; }
+.error { color: var(--baja); font-size: .9rem; }
+
+.btn { font: inherit; font-weight: 600; border: 1px solid transparent; padding: .6rem 1rem; cursor: pointer; border-radius: 3px; }
+.btn--primario { background: var(--bosque); color: #fff; }
+.btn--primario:hover { background: #14291e; }
+.btn--texto { background: none; border-color: var(--borde); }
+.btn--mini { font-size: .82rem; padding: .3rem .6rem; background: none; border: 1px solid var(--borde); border-radius: 3px; cursor: pointer; font-family: inherit; }
+
+/* ---------------------------------------------------------------- acceso */
+.acceso { min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; }
+.acceso__caja { background: var(--blanco); border: 1px solid var(--borde); padding: 2.5rem; width: min(380px, 100%); border-radius: 4px; }
+.acceso h1 { font-size: 1.5rem; margin-bottom: .3rem; }
+.acceso form { display: grid; gap: .4rem; margin-top: 1.8rem; }
+.acceso label { font-size: .85rem; color: var(--musgo); margin-top: .6rem; }
+.acceso input { font: inherit; padding: .6rem .7rem; border: 1px solid var(--borde); border-radius: 3px; }
+.acceso .btn { margin-top: 1.2rem; }
+
+/* ----------------------------------------------------------------- tope */
+.tope { background: var(--blanco); border-bottom: 1px solid var(--borde); position: sticky; top: 0; z-index: 10; }
+.tope__fila { max-width: 1080px; margin: 0 auto; padding: .7rem 1.5rem; display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+.pestanas { display: flex; gap: .2rem; margin-right: auto; }
+.pestanas button { font: inherit; background: none; border: 0; border-bottom: 2px solid transparent; padding: .5rem .7rem; cursor: pointer; color: var(--musgo); }
+.pestanas button.activa { color: var(--tinta); border-bottom-color: var(--miel); font-weight: 600; }
+
+.contenedor { max-width: 1080px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+.titular { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.titular h2 { font-size: 1.75rem; }
+#mes { font: inherit; padding: .45rem .6rem; border: 1px solid var(--borde); border-radius: 3px; background: var(--blanco); }
+
+/* ----------------------------------------------------------------- kpis */
+.kpis { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin-bottom: 2rem; }
+.kpi { background: var(--blanco); border: 1px solid var(--borde); border-radius: 4px; padding: 1.1rem 1.2rem; }
+.kpi__etiqueta { font-size: .82rem; color: var(--musgo); }
+.kpi__cifra { font-family: var(--serif); font-size: 2.3rem; line-height: 1.1; margin: .3rem 0 .2rem; font-variant-numeric: tabular-nums; }
+.kpi__var { font-size: .85rem; font-weight: 600; }
+.sube { color: var(--sube); }
+.baja { color: var(--baja); }
+.igual { color: var(--musgo); }
+
+.dos-columnas { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 800px) { .dos-columnas { grid-template-columns: 1fr 1fr; } }
+.tarjeta { background: var(--blanco); border: 1px solid var(--borde); border-radius: 4px; padding: 1.3rem; margin-bottom: 1rem; }
+.tarjeta h3 { font-size: 1.05rem; font-family: var(--sans); font-weight: 700; margin-bottom: .9rem; }
+
+.barras { list-style: none; margin: 0; padding: 0; }
+.barras li { display: grid; grid-template-columns: 1fr auto; gap: .5rem; align-items: center; padding: .4rem 0; font-size: .93rem; }
+.barras .pista { grid-column: 1 / -1; height: 6px; background: #EDEFEA; border-radius: 3px; overflow: hidden; }
+.barras .relleno { height: 100%; background: var(--bosque); }
+.barras b { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.historico { display: flex; align-items: flex-end; gap: .8rem; height: 150px; }
+.historico div { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: .4rem; height: 100%; }
+.historico .col { width: 100%; background: var(--bosque); border-radius: 2px 2px 0 0; min-height: 2px; }
+.historico span { font-size: .78rem; color: var(--musgo); }
+.historico b { font-size: .82rem; font-variant-numeric: tabular-nums; }
+
+/* --------------------------------------------------------- formularios */
+.fila-form { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.fila-form--vertical { flex-direction: column; max-width: 620px; }
+.fila-form input, .fila-form textarea { font: inherit; padding: .55rem .7rem; border: 1px solid var(--borde); border-radius: 3px; flex: 1; min-width: 200px; }
+
+.rejilla { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.item { background: var(--blanco); border: 1px solid var(--borde); border-radius: 4px; overflow: hidden; }
+.item img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: #eee; }
+.item__pie { padding: .6rem; display: flex; gap: .4rem; align-items: center; justify-content: space-between; font-size: .82rem; }
+.marca-estado { font-size: .75rem; padding: .1rem .45rem; border-radius: 2px; border: 1px solid var(--borde); color: var(--musgo); }
+.marca-estado.aprobada { color: var(--sube); border-color: var(--sube); }
+
+.faq-item { background: var(--blanco); border: 1px solid var(--borde); border-radius: 4px; padding: 1rem 1.2rem; margin-bottom: .7rem; }
+.faq-item h4 { margin: 0 0 .3rem; font-size: 1rem; }
+.faq-item p { margin: 0 0 .7rem; color: #3c4a43; font-size: .93rem; }
