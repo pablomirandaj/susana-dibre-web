@@ -12,6 +12,11 @@
   --sans: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
+
+/* El atributo hidden debe ganar siempre. Sin esto, cualquier regla de clase
+   con display (por ejemplo .acceso { display: grid }) lo anula y el elemento
+   sigue viéndose aunque el JavaScript lo haya ocultado. */
+[hidden] { display: none !important; }
 body { margin: 0; background: var(--fondo); color: var(--tinta); font-family: var(--sans); font-size: 15px; line-height: 1.55; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 500; margin: 0; line-height: 1.15; }
 :focus-visible { outline: 2px solid var(--miel); outline-offset: 2px; }
