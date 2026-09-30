@@ -4,6 +4,7 @@
   "business": {
     "name": "La Ruta del Barbero",
     "short_location": "Clara del Rey",
+    "history": "Antes era el local de Clara del Rey de la franquicia Doble Alfa Barberos. Se independizo y paso a llamarse La Ruta del Barbero (mismo perfil 103123 de Booksy). No usar la marca Doble Alfa en la web.",
     "legal_name": { "value": null, "verified": false, "note": "NO VERIFICADO. Rellenar con la razon social real del titular. Mientras tanto el pie muestra el nombre comercial." },
     "tagline": { "value": "Barbería en Clara del Rey, Madrid", "verified": true, "source": "Booksy (nombre del perfil y direccion)" },
     "sector": "Barbería y peluquería masculina",
@@ -16,7 +17,7 @@
   "contact": {
     "address": { "value": "Calle de Clara del Rey, 58", "postal_code": "28002", "city": "Madrid", "verified": true, "source": "Booksy + Bing Maps" },
     "geo": { "lat": 40.446815, "lng": -3.667668, "verified": true, "source": "Bing Maps (ficha La ruta del barbero (Clara del Rey))" },
-    "phone": { "value": null, "display": null, "verified": false, "note": "NO VERIFICADO. Sin numero confirmado no se renderizan los enlaces de llamada. Rellenar con formato +34XXXXXXXXX y display '91 XXX XX XX'." },
+    "phone": { "value": null, "display": null, "verified": false, "note": "NO VERIFICADO. En buscadores aparece +34914451678 de la etapa Doble Alfa, sin confirmar si es de este local ni si lo conservan. Sin numero confirmado no se renderizan los enlaces de llamada. Rellenar con formato +34XXXXXXXXX y display '91 XXX XX XX'." },
     "whatsapp": { "value": null, "verified": false, "note": "NO VERIFICADO. Sin numero confirmado el boton de WhatsApp NO se renderiza. Rellenar con formato +34XXXXXXXXX." },
     "email": { "value": null, "verified": false },
     "maps_url": { "value": "https://www.google.com/maps/search/?api=1&query=La+Ruta+del+Barbero+Calle+de+Clara+del+Rey+58+28002+Madrid", "verified": false, "note": "Enlace de busqueda generico. Sustituir por el enlace corto del perfil real de Google Business." },
