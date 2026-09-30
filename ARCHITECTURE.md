@@ -9,7 +9,7 @@
                               |
                      WEB PÚBLICA (Cloudflare Pages)
                      HTML generado desde data/*.json
-                     Tratamientos · Equipo · FAQ · Cómo llegar
+                     Servicios · Equipo · FAQ · Cómo llegar
                               |
                     +---------+---------+
                     |                   |
@@ -35,7 +35,7 @@
              cálculo en SQL, no IA                  (Fase 2)
                     |                                       |
                     v                                       v
-              PANEL PRIVADO (panel.susanadibre.es)     Email mensual
+              PANEL PRIVADO (panel.larutadelbarbero.es)     Email mensual
               Supabase Auth · Resumen · Contenido      (Fase 2)
               Preguntas · Informes
 ```
@@ -50,11 +50,11 @@ deja el HTML final en `public/`.
 Páginas generadas:
 
 - `/` portada con la carta completa
-- `/tratamientos/{rituales, masajes, faciales, corporal, micropigmentacion, depilacion-laser}/`
+- `/servicios/{cortes, barba, color-y-extras}/`
 - `/aviso-legal/`, `/privacidad/`, `/cookies/` (pendientes de revisión legal)
 
-Cada página de tratamiento existe por SEO: la intención de búsqueda real es
-"micropigmentación Gijón" o "depilación láser Gijón", no "estética Gijón".
+Cada página de servicio existe por SEO: la intención de búsqueda real es
+"afeitado tradicional Madrid" o "barbería Prosperidad", no solo "barbería".
 Meterlo todo en la portada desperdicia esas búsquedas.
 
 ### Reservas
@@ -104,7 +104,7 @@ añadir el segundo no obliga a migrar nada.
 
 ### Cálculo de KPIs
 `kpis_mes(p_mes)` devuelve el mes pedido y el anterior, con la lista de
-tratamientos más vistos y el origen del tráfico. `serie_meses(n)` devuelve la
+servicios más vistos y el origen del tráfico. `serie_meses(n)` devuelve la
 serie para la gráfica. Ambas comprueban que quien pregunta es administrador.
 
 La variación se calcula como `(actual - previo) / previo * 100`, con el caso

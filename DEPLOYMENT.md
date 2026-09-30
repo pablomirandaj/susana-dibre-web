@@ -1,7 +1,7 @@
 # Guía de despliegue
 
 Desde "tengo los archivos en el ordenador" hasta "la web funciona en
-www.susanadibre.es".
+www.larutadelbarbero.es".
 
 Sigue los pasos en orden. Si algo falla, no continúes: cada bloque termina con
 una comprobación.
@@ -34,25 +34,29 @@ npm run dev
 Abre `http://localhost:3000`.
 
 **Comprueba:** carga la portada, el menú lleva a cada sección, el buscador de
-preguntas filtra al escribir "cancelar", y las páginas de tratamiento abren
+preguntas filtra al escribir "cancelar", y las páginas de servicio abren
 desde los enlaces de la carta.
 
 Prueba también a estrechar la ventana hasta 375 px de ancho: debe aparecer la
-barra inferior con "Llamar" y "Reservar cita".
+barra inferior con "Cómo llegar" (o "Llamar" si ya hay teléfono) y
+"Reservar cita".
 
 ---
 
 ## C. Confirmar los datos pendientes
 
-Este paso no es opcional. Llama al centro y confirma:
+Este paso no es opcional. Habla con la barbería y confirma:
 
-- Teléfono correcto.
-- Horario real (¿jornada partida o continua?).
+- Teléfono de la barbería.
+- Horario real (L-V 10:00–21:00, S 10:00–15:00 según Booksy).
+- Cuenta de Instagram (@rutadelbarbero) y nombres de los barberos.
+- Razón social del titular (para el pie y los textos legales).
+- Dominio definitivo de la web.
 - Si hay WhatsApp de negocio y qué número.
 - Enlace de su ficha de Google Business.
 - Si autoriza usar las fotos de su Instagram en la web.
-- Aparcamiento y preparación previa a los tratamientos (dos preguntas de la
-  FAQ están en borrador esperando esto).
+- Si se atiende sin cita, aparcamiento y pago con tarjeta (tres preguntas de
+  la FAQ están en borrador esperando esto).
 
 Actualiza `data/config.json` y `data/faq.json` con lo confirmado y pon
 `"verified": true` en los campos que corresponda.
@@ -69,7 +73,7 @@ Sin README ni .gitignore (ya los tienes).
 ```bash
 git init
 git add .
-git commit -m "Web y panel de Susana Dibré"
+git commit -m "Web y panel de La Ruta del Barbero"
 git branch -M main
 git remote add origin https://github.com/TU-USUARIO/susana-dibre-web.git
 git push -u origin main
@@ -103,7 +107,7 @@ git push -u origin dev
 ```sql
 insert into admins (user_id, business_id, email)
 values ('PEGA-AQUI-EL-UID',
-        (select id from businesses where slug = 'susana-dibre'),
+        (select id from businesses where slug = 'la-ruta-del-barbero'),
         'correo@delnegocio.es');
 ```
 
@@ -193,16 +197,16 @@ Si no aparece nada, mira los logs en Cloudflare → **Functions** → **Logs**.
 Solo con la autorización del negocio, y solo si el dominio ya está comprado.
 
 1. En Cloudflare Pages → **Custom domains** → **Set up a custom domain** →
-   `www.susanadibre.es`.
+   `www.larutadelbarbero.es`.
 2. Cloudflare indica el registro CNAME a crear. Si el dominio está registrado
    fuera de Cloudflare, hay que crearlo en el panel del registrador.
-3. Repite para `susanadibre.es` y configura la redirección al `www`.
-4. Repite para `panel.susanadibre.es`.
+3. Repite para `larutadelbarbero.es` y configura la redirección al `www`.
+4. Repite para `panel.larutadelbarbero.es`.
 
 **Comprueba:** las tres direcciones abren y el candado del navegador sale sin
 avisos. El certificado puede tardar hasta 15 minutos.
 
-Si `panel.susanadibre.es` apunta al mismo proyecto, el panel queda en
+Si `panel.larutadelbarbero.es` apunta al mismo proyecto, el panel queda en
 `/admin/`. Para servirlo en la raíz del subdominio se añade una regla de
 redirección en Cloudflare.
 
@@ -210,7 +214,7 @@ redirección en Cloudflare.
 
 ## L. Probar el panel
 
-Abre `panel.susanadibre.es/admin/` y entra con el usuario del paso F.
+Abre `panel.larutadelbarbero.es/admin/` y entra con el usuario del paso F.
 
 **Comprueba:**
 - Con las credenciales correctas entra y muestra el resumen.
@@ -236,7 +240,7 @@ cargar el script. No pongas un ID de ejemplo: sin ID real, mejor sin GA4.
 ## N. Search Console
 
 1. search.google.com/search-console → **Añadir propiedad** → **Prefijo de
-   URL** → `https://www.susanadibre.es`.
+   URL** → `https://www.larutadelbarbero.es`.
 2. Verifica con el método de etiqueta HTML: copia la etiqueta `<meta>` y
    añádela en la función `head()` de `build.js`. Recompila y sube.
 3. Una vez verificado: **Sitemaps** → envía `sitemap.xml`.
@@ -248,7 +252,7 @@ cargar el script. No pongas un ID de ejemplo: sin ID real, mejor sin GA4.
 
 ## O. Google Business Profile
 
-En el perfil del negocio en Google, añade `https://www.susanadibre.es` como
+En el perfil del negocio en Google, añade `https://www.larutadelbarbero.es` como
 sitio web. Es de los cambios que más tráfico mueve en un negocio local, y es
 gratis.
 

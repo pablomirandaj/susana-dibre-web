@@ -1,84 +1,85 @@
 {
-  "_note": "Toda respuesta debe apoyarse en informacion verificada. Si no se sabe, la respuesta remite al centro. Las marcadas review:true deben validarse con el negocio antes de publicar.",
+  "_note": "Toda respuesta debe apoyarse en informacion verificada. Si no se sabe, la respuesta remite a la barberia. Las marcadas review:true deben validarse con el negocio antes de publicar.",
   "items": [
     {
       "id": "reservar",
-      "q": "¿Cómo reservo una cita?",
-      "a": "Desde el botón de reservar de esta web, que abre la agenda del centro en Booksy. Ahí se ve la disponibilidad real y se confirma la cita al momento. También se puede reservar por teléfono.",
-      "tags": ["reserva", "cita", "booksy", "agenda", "pedir hora"],
+      "q": "¿Cómo reservo cita?",
+      "a": "Desde el botón de reservar de esta web, que abre la agenda de la barbería en Booksy. Ahí ves los huecos libres reales, eliges barbero y la cita queda confirmada al momento.",
+      "tags": ["reserva", "cita", "booksy", "agenda", "pedir hora", "hueco"],
       "category": "Reservas",
       "review": false
     },
     {
+      "id": "sin-cita",
+      "q": "¿Puedo ir sin cita?",
+      "a": "PENDIENTE DE CONFIRMAR CON EL NEGOCIO. Mientras tanto, lo más seguro es reservar en Booksy.",
+      "tags": ["sin cita", "pasar", "directamente", "esperar", "espera"],
+      "category": "Reservas",
+      "review": true,
+      "draft": true
+    },
+    {
       "id": "cancelar",
       "q": "¿Puedo cancelar o cambiar mi cita?",
-      "a": "Sí, desde la propia reserva de Booksy o llamando al centro. Las condiciones y plazos de cancelación los fija el centro: consúltalos al reservar.",
+      "a": "Sí, desde la propia reserva de Booksy. Las condiciones y plazos de cancelación los fija la barbería: consúltalos al reservar.",
       "tags": ["cancelar", "anular", "cambiar", "modificar", "aplazar"],
       "category": "Reservas",
       "review": true
     },
     {
-      "id": "primera-vez",
-      "q": "Es mi primera vez, ¿por dónde empiezo?",
-      "a": "Por la valoración inicial: 40 minutos, 30 €. Es una consulta en la que se analiza tu caso y se propone un plan adaptado, en lugar de elegir un tratamiento a ciegas.",
-      "tags": ["primera", "empezar", "valoracion", "consulta", "no se que hacerme"],
-      "category": "Tratamientos",
-      "review": false
-    },
-    {
       "id": "donde",
       "q": "¿Dónde estáis?",
-      "a": "En Av. del Llano, 27, bajo, 33209 Gijón.",
-      "tags": ["donde", "direccion", "ubicacion", "llegar", "calle", "gijon"],
-      "category": "El centro",
+      "a": "En la Calle de Clara del Rey, 58, 28002 Madrid, en el barrio de Prosperidad (Chamartín).",
+      "tags": ["donde", "direccion", "ubicacion", "llegar", "calle", "madrid", "prosperidad", "chamartin"],
+      "category": "La barbería",
       "review": false
     },
     {
       "id": "horario",
       "q": "¿Qué horario tenéis?",
-      "a": "De lunes a viernes, de 10:00 a 14:00 y de 16:00 a 20:00. Sábados y domingos, cerrado.",
+      "a": "De lunes a viernes, de 10:00 a 21:00. Sábados, de 10:00 a 15:00. Domingos, cerrado.",
       "tags": ["horario", "abierto", "cerrado", "hora", "sabado", "domingo"],
-      "category": "El centro",
+      "category": "La barbería",
       "review": true
     },
     {
       "id": "precios",
-      "q": "¿Cuánto cuestan los tratamientos?",
-      "a": "Cada tratamiento tiene su precio publicado en esta web y en Booksy. Los rituales van de 120 € a 220 €, los masajes de 50 € a 80 €, y los faciales de 50 € a 130 €. La depilación láser depende de la zona.",
-      "tags": ["precio", "cuesta", "cuanto", "tarifa", "coste"],
-      "category": "Tratamientos",
+      "q": "¿Cuánto cuesta un corte?",
+      "a": "El corte de pelo cuesta 18 € y el corte con arreglo de barba, 28 €. Niños hasta 12 años, 15 €, y jubilados, 11 €. Todos los precios están publicados en esta web y en Booksy.",
+      "tags": ["precio", "cuesta", "cuanto", "tarifa", "coste", "corte"],
+      "category": "Servicios",
+      "review": false
+    },
+    {
+      "id": "premium",
+      "q": "¿Qué incluye el servicio premium?",
+      "a": "Afeitado tradicional con brocha, vaporizador de ozono, máquina de masaje e hidratación de piel y barba con productos pre y post afeitado. Con corte incluido son 36 € y una hora; solo barba, 22 € y media hora.",
+      "tags": ["premium", "afeitado", "ozono", "masaje", "toalla", "navaja"],
+      "category": "Servicios",
       "review": false
     },
     {
       "id": "duracion",
-      "q": "¿Cuánto dura cada sesión?",
-      "a": "Depende del tratamiento. Los masajes y faciales suelen durar entre 30 minutos y una hora y media; la micropigmentación, unas tres horas. La duración exacta aparece junto a cada servicio.",
+      "q": "¿Cuánto dura cada servicio?",
+      "a": "Un corte, unos 30 minutos; corte con barba, 40 minutos; el corte con barba premium, una hora. La duración exacta aparece junto a cada servicio.",
       "tags": ["dura", "duracion", "tiempo", "minutos", "cuanto tarda"],
-      "category": "Tratamientos",
+      "category": "Servicios",
       "review": false
     },
     {
-      "id": "cosmetica",
-      "q": "¿Qué cosmética usáis?",
-      "a": "Cosmética ecológica Alqvimia y alta cosmética francesa Matis.",
-      "tags": ["cosmetica", "productos", "marcas", "alqvimia", "matis", "ecologico", "natural"],
-      "category": "El centro",
+      "id": "ninos",
+      "q": "¿Cortáis el pelo a niños?",
+      "a": "Sí. Niños hasta 12 años, 15 € y 30 minutos.",
+      "tags": ["niños", "ninos", "hijo", "crio", "pequeño", "infantil"],
+      "category": "Servicios",
       "review": false
     },
     {
-      "id": "quien",
-      "q": "¿Quién realiza los tratamientos?",
-      "a": "El equipo del centro: Susana Diez, Lorena y Yeffrey. Al reservar en Booksy puedes elegir profesional.",
-      "tags": ["quien", "profesional", "equipo", "persona", "elegir"],
-      "category": "El centro",
-      "review": false
-    },
-    {
-      "id": "bonos",
-      "q": "¿Hay bonos o tarjetas regalo?",
-      "a": "Sí. El centro tiene bonos de sesiones y tarjetas regalo disponibles a través de Booksy.",
-      "tags": ["bono", "bonos", "regalo", "tarjeta", "packs", "sesiones"],
-      "category": "Reservas",
+      "id": "color",
+      "q": "¿Hacéis color o tinte de barba?",
+      "a": "Sí: color semipermanente para pelo corto (18 €) y tinte de barba (12 €). También arreglo de cejas a navaja por 5 €.",
+      "tags": ["color", "tinte", "canas", "barba", "cejas"],
+      "category": "Servicios",
       "review": false
     },
     {
@@ -86,16 +87,16 @@
       "q": "¿Hay aparcamiento cerca?",
       "a": "PENDIENTE DE CONFIRMAR CON EL NEGOCIO.",
       "tags": ["parking", "aparcar", "coche", "aparcamiento"],
-      "category": "El centro",
+      "category": "La barbería",
       "review": true,
       "draft": true
     },
     {
-      "id": "preparacion",
-      "q": "¿Tengo que prepararme antes de la sesión?",
-      "a": "PENDIENTE DE CONFIRMAR CON EL NEGOCIO. Depende del tratamiento, especialmente en láser y micropigmentación.",
-      "tags": ["preparacion", "antes", "preparar", "afeitar", "sol"],
-      "category": "Tratamientos",
+      "id": "pago",
+      "q": "¿Se puede pagar con tarjeta?",
+      "a": "PENDIENTE DE CONFIRMAR CON EL NEGOCIO.",
+      "tags": ["pago", "tarjeta", "efectivo", "bizum", "pagar"],
+      "category": "La barbería",
       "review": true,
       "draft": true
     }

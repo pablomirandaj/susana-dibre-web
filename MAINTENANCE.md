@@ -14,23 +14,23 @@ Cloudflare publica solo en un par de minutos.
 
 ## Cambiar un precio o una duración
 
-`data/services.json`. Busca el tratamiento y edita `price` (número, sin el
+`data/services.json`. Busca el servicio y edita `price` (número, sin el
 símbolo del euro) y `duration` (texto, tal y como aparece en Booksy).
 
 ```json
-{ "name": "Drenaje Linfático", "price": 65, "duration": "1h" }
+{ "name": "Corte de Pelo", "price": 18, "duration": "30min" }
 ```
 
 **Importante:** el precio de la web tiene que coincidir con el de Booksy. Si
 cambia en Booksy, cambia aquí. Un precio distinto en los dos sitios genera
 desconfianza y reclamaciones.
 
-## Añadir un tratamiento
+## Añadir un servicio
 
 En `data/services.json`, dentro de la categoría que le corresponda:
 
 ```json
-{ "name": "Nombre exacto", "price": 80, "duration": "1h", "desc": "Una frase." }
+{ "name": "Nombre exacto", "price": 20, "duration": "30min", "desc": "Una frase." }
 ```
 
 `desc` es opcional. Añade `"popular": true` para que salga la marca de "Más
@@ -49,15 +49,16 @@ reservado", pero solo si de verdad lo es.
 }
 ```
 
-Con `"page": true` se genera `/tratamientos/{slug}/` y entra sola en el menú
+Con `"page": true` se genera `/servicios/{slug}/` y entra sola en el menú
 del pie y en el sitemap. Con `false`, la categoría solo aparece en la carta de
 la portada.
 
 ## Cambiar el teléfono o la dirección
 
 `data/config.json`, dentro de `contact`. El teléfono va dos veces: `value` en
-formato internacional sin espacios (`+34984392280`, que es lo que marca el
-móvil) y `display` como se lee (`984 39 22 80`).
+formato internacional sin espacios (`+34910000000`, que es lo que marca el
+móvil) y `display` como se lee (`91 000 00 00`). Mientras `value` sea `null`
+la web no muestra teléfono.
 
 ## Activar el botón de WhatsApp
 
@@ -141,7 +142,7 @@ copiado de otra web.
 1. **Personas que visitaron la web.** ¿Sube o baja respecto al mes anterior?
 2. **Quisieron reservar.** Es el número que importa. Si suben las visitas pero
    no este, el problema está en la web, no en la captación.
-3. **Tratamientos más consultados.** Sirve para decidir promociones y qué
+3. **Servicios más consultados.** Sirve para decidir promociones y qué
    contenido reforzar.
 4. **De dónde llegan.** Si Google sube, el SEO está funcionando. Si Instagram
    sube, las publicaciones están funcionando.

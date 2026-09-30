@@ -1,5 +1,5 @@
 -- =========================================================================
--- Susana Dibré — esquema de base de datos (Supabase / PostgreSQL)
+-- La Ruta del Barbero — esquema de base de datos (Supabase / PostgreSQL)
 -- Ejecutar en Supabase > SQL Editor > New query > Run.
 --
 -- Diseño pensado para que mañana quepan varios negocios sin migración
@@ -19,9 +19,10 @@ create table if not exists businesses (
 
 -- Id fijo para poder usarlo como valor por defecto en events.
 -- (PostgreSQL no admite subconsultas en un DEFAULT.)
+-- Si la fila ya existía con otro nombre, se renombra en lugar de fallar.
 insert into businesses (id, slug, name)
-values ('00000000-0000-0000-0000-000000000001', 'susana-dibre', 'Susana Dibré')
-on conflict (slug) do nothing;
+values ('00000000-0000-0000-0000-000000000001', 'la-ruta-del-barbero', 'La Ruta del Barbero')
+on conflict (id) do update set slug = excluded.slug, name = excluded.name;
 
 -- -------------------------------------------------------- administradores
 -- Enlaza un usuario de Supabase Auth con el negocio que puede administrar.

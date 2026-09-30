@@ -1,20 +1,21 @@
 /* =========================================================================
-   Susana Dibré — hoja de estilo única
-   Dirección artística: centro ecológico de estética integral, Gijón.
-   Verde botánico profundo + piedra caliza fría + miel (cosmética Alqvimia).
+   La Ruta del Barbero — hoja de estilo única
+   Dirección artística: barbería clásica en Clara del Rey, Madrid.
+   Carbón + crema de papel + cobre (sillón de cuero y navaja).
+   (Los nombres de las variables se conservan del diseño original.)
    Tipografía: Fraunces (display) + Karla (texto).
    ========================================================================= */
 
 :root {
-  --tinta:      #12211B;
-  --bosque:     #1B3729;
-  --musgo:      #4B6B55;
-  --piedra:     #E5E5DD;
-  --papel:      #F7F7F3;
-  --miel:       #A97822;
-  --miel-claro: #D9B25E;
-  --linea:      rgba(18, 33, 27, .16);
-  --linea-clara: rgba(247, 247, 243, .22);
+  --tinta:      #1A1714;
+  --bosque:     #1C1A17;
+  --musgo:      #6E5E4E;
+  --piedra:     #ECE4D8;
+  --papel:      #FAF6EF;
+  --miel:       #A0522D;
+  --miel-claro: #C8894F;
+  --linea:      rgba(26, 23, 20, .16);
+  --linea-clara: rgba(250, 246, 239, .22);
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans:  "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -105,11 +106,11 @@ a { color: inherit; }
   transition: background-color .18s ease, color .18s ease;
 }
 .btn--miel { background: var(--miel); color: #fff; }
-.btn--miel:hover { background: #8d631a; }
+.btn--miel:hover { background: #83401F; }
 .btn--linea { border-color: currentColor; background: none; }
-.btn--linea:hover { background: rgba(18,33,27,.06); }
+.btn--linea:hover { background: rgba(26,23,20,.06); }
 .btn--claro { border-color: var(--linea-clara); color: var(--papel); background: none; }
-.btn--claro:hover { background: rgba(247,247,243,.1); }
+.btn--claro:hover { background: rgba(250,246,239,.1); }
 
 /* -------------------------------------------------------------------- hero */
 .hero { background: var(--bosque); color: var(--papel); padding-block: clamp(3.5rem, 8vw, 6.5rem) clamp(3rem, 7vw, 5.5rem); }
@@ -121,14 +122,14 @@ a { color: inherit; }
   max-width: 12ch;
 }
 .hero h1 em { font-style: italic; font-variation-settings: "SOFT" 60, "WONK" 1; }
-.hero__texto { margin: 1.6rem 0 2.2rem; max-width: 46ch; color: rgba(247,247,243,.82); font-size: 1.08rem; }
+.hero__texto { margin: 1.6rem 0 2.2rem; max-width: 46ch; color: rgba(250,246,239,.82); font-size: 1.08rem; }
 .hero__acciones { display: flex; flex-wrap: wrap; gap: .8rem; }
 
 .prueba {
   margin-top: 2.6rem; padding-top: 1.4rem;
   border-top: 1px solid var(--linea-clara);
   display: flex; align-items: baseline; gap: .7rem; flex-wrap: wrap;
-  font-size: .92rem; color: rgba(247,247,243,.72);
+  font-size: .92rem; color: rgba(250,246,239,.72);
 }
 .prueba b { font-family: var(--serif); font-size: 1.9rem; color: var(--miel-claro); font-weight: 400; }
 
@@ -137,12 +138,12 @@ a { color: inherit; }
 /* ------------------------------------------------------------- marcador de foto */
 .foto-pendiente {
   display: grid; place-content: center; text-align: center;
-  background: repeating-linear-gradient(135deg, rgba(75,107,85,.14) 0 12px, rgba(75,107,85,.06) 12px 24px);
+  background: repeating-linear-gradient(135deg, rgba(110,94,78,.14) 0 12px, rgba(110,94,78,.06) 12px 24px);
   border: 1px dashed var(--musgo);
   color: var(--musgo); font-size: .8rem; padding: 1rem; line-height: 1.4;
   min-height: 180px;
 }
-.hero .foto-pendiente { border-color: rgba(247,247,243,.35); color: rgba(247,247,243,.65); }
+.hero .foto-pendiente { border-color: rgba(250,246,239,.35); color: rgba(250,246,239,.65); }
 
 /* ---------------------------------------------------------------- secciones */
 .seccion { padding-block: var(--ritmo); }
@@ -152,7 +153,7 @@ a { color: inherit; }
   .seccion__cabeza { grid-template-columns: 1fr 1.4fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; }
 }
 .seccion__cabeza h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); max-width: 16ch; }
-.seccion__cabeza p { margin: 0; max-width: 56ch; color: #3a4a42; }
+.seccion__cabeza p { margin: 0; max-width: 56ch; color: #4a3f35; }
 
 /* --------------------------------------------------------- relato / centro */
 .relato { display: grid; gap: clamp(2rem, 4vw, 3.5rem); }
@@ -194,7 +195,7 @@ a { color: inherit; }
 }
 @media (min-width: 800px) { .primera { grid-template-columns: 1fr auto; align-items: center; } }
 .primera h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-.primera p { margin: .7rem 0 0; color: rgba(247,247,243,.8); max-width: 52ch; }
+.primera p { margin: .7rem 0 0; color: rgba(250,246,239,.8); max-width: 52ch; }
 
 /* --------------------------------------------------------------- equipo */
 .equipo { display: flex; flex-wrap: wrap; gap: 2.5rem; }
@@ -226,7 +227,7 @@ a { color: inherit; }
   font-size: 1.3rem; color: var(--musgo); line-height: 1;
 }
 .faq details[open] summary::after { content: "–"; }
-.faq p { margin: 0 0 1.3rem; max-width: var(--medida); color: #3a4a42; }
+.faq p { margin: 0 0 1.3rem; max-width: var(--medida); color: #4a3f35; }
 .faq [hidden] { display: none; }
 .sin-resultados { padding: 1.5rem 0; color: var(--musgo); }
 
@@ -242,7 +243,7 @@ a { color: inherit; }
 .mapa { border: 0; width: 100%; min-height: 320px; height: 100%; filter: saturate(.75); }
 
 /* ------------------------------------------------------------------- pie */
-.pie { background: var(--bosque); color: rgba(247,247,243,.72); padding-block: 3.5rem 2rem; font-size: .92rem; }
+.pie { background: var(--bosque); color: rgba(250,246,239,.72); padding-block: 3.5rem 2rem; font-size: .92rem; }
 .pie a { color: var(--papel); }
 .pie__grid { display: grid; gap: 2rem; }
 @media (min-width: 760px) { .pie__grid { grid-template-columns: 1.4fr 1fr 1fr; } }

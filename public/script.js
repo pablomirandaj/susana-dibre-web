@@ -1,5 +1,5 @@
 /* =========================================================================
-   Susana Dibré — script público
+   La Ruta del Barbero — script público
    Sin dependencias. Sin cookies. Sin datos personales.
    ========================================================================= */
 (function () {

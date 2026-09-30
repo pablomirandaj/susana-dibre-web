@@ -1,7 +1,7 @@
-# Susana Dibré — web y panel
+# La Ruta del Barbero — web y panel
 
-Sistema de captación digital para Susana Dibré, centro ecológico de estética
-integral en Av. del Llano 27, Gijón.
+Sistema de captación digital para La Ruta del Barbero, barbería en la Calle de
+Clara del Rey, 58, 28002 Madrid (barrio de Prosperidad, Chamartín).
 
 La web atrae y convence. Booksy gestiona la reserva. El panel demuestra qué
 está generando la web.
@@ -14,14 +14,14 @@ está generando la web.
 /
 ├── data/                 Contenido del negocio. Es la única fuente de verdad.
 │   ├── config.json       Datos del negocio, contacto, horario, enlaces
-│   ├── services.json     Carta de tratamientos (precios y duraciones de Booksy)
+│   ├── services.json     Carta de servicios (precios y duraciones de Booksy)
 │   └── faq.json          Preguntas frecuentes de la web pública
 │
 ├── build.js              Generador estático. Convierte data/ en HTML.
 │
 ├── public/               Lo que se publica. Salida del build + estáticos.
 │   ├── index.html        (generado)
-│   ├── tratamientos/     (generado) una carpeta por categoría con página propia
+│   ├── servicios/       (generado) una carpeta por categoría con página propia
 │   ├── styles.css        Hoja de estilo de la web pública
 │   ├── script.js         Eventos, buscador de FAQ, menú móvil
 │   ├── admin/            Panel privado
@@ -90,14 +90,19 @@ confirmar** y aparecen listados al final de cada compilación:
 
 | Campo | Situación |
 |---|---|
-| Teléfono | 984 39 22 80. Coincide en cuatro directorios, sin confirmación del negocio |
-| Horario | Booksy indica jornada partida, Fresha continuada. Es una inferencia |
+| Teléfono | Sin número. Mientras no lo haya, no se generan enlaces de llamada |
+| Horario | L-V 10:00–21:00 y S 10:00–15:00 según Booksy (vía buscadores). Confirmar |
+| Instagram | @rutadelbarbero, encontrado en buscadores. Confirmar que es la cuenta del negocio |
+| Equipo | Sin nombres de barberos. La sección muestra un texto genérico |
+| Razón social | Desconocida. El pie y los legales usan el nombre comercial |
+| Dominio | `larutadelbarbero.es` es provisional |
+| Duración de color y extras | No visible en la consulta. Completar desde Booksy |
 | WhatsApp | Sin número. Mientras no lo haya, el botón no se genera |
 | Valoración de Google | No verificada. Solo se publica la de Booksy, con su fuente a la vista |
 | Enlace de Google Maps | Búsqueda genérica. Sustituir por el del perfil real |
 | Año de apertura | Desconocido. No aparece en ningún sitio de la web |
 | Fotografías | Ninguna. Las cajas rayadas marcan los huecos hasta tener autorización |
-| Aparcamiento y preparación previa | Preguntas en borrador, no se publican |
+| Sin cita, aparcamiento y pago con tarjeta | Preguntas en borrador, no se publican |
 
 Los textos legales están deliberadamente vacíos y marcados para revisión
 jurídica. No se publica un texto legal generado automáticamente.

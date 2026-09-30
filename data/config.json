@@ -2,77 +2,80 @@
   "_comment": "Fuente unica de configuracion del cliente. Cambiar aqui = cambiar la web. Campos con verified:false requieren confirmacion del negocio antes de publicar.",
 
   "business": {
-    "name": "Susana Dibré",
-    "legal_name": { "value": "SUSANADIEZ BREA", "verified": true, "source": "Booksy" },
-    "tagline": { "value": "Centro ecológico de estética integral", "verified": true, "source": "Booksy (texto propio del negocio)" },
-    "sector": "Estética integral y bienestar",
-    "city": "Gijón",
-    "region": "Asturias",
+    "name": "La Ruta del Barbero",
+    "short_location": "Clara del Rey",
+    "legal_name": { "value": null, "verified": false, "note": "NO VERIFICADO. Rellenar con la razon social real del titular. Mientras tanto el pie muestra el nombre comercial." },
+    "tagline": { "value": "Barbería en Clara del Rey, Madrid", "verified": true, "source": "Booksy (nombre del perfil y direccion)" },
+    "sector": "Barbería y peluquería masculina",
+    "city": "Madrid",
+    "neighborhood": "Prosperidad, Chamartín",
+    "region": "Comunidad de Madrid",
     "founded_year": { "value": null, "verified": false, "note": "NO VERIFICADO. No usar en la web hasta confirmarlo." }
   },
 
   "contact": {
-    "address": { "value": "Av. del Llano, 27, bajo", "postal_code": "33209", "city": "Gijón", "verified": true, "source": "Booksy + Páginas Amarillas + Fresha" },
-    "phone": { "value": "+34984392280", "display": "984 39 22 80", "verified": false, "source": "Páginas Amarillas, Cylex, Fresha, Sesale (4 fuentes coincidentes)", "note": "Coincide en 4 directorios pero no confirmado por el negocio. CONFIRMAR." },
+    "address": { "value": "Calle de Clara del Rey, 58", "postal_code": "28002", "city": "Madrid", "verified": true, "source": "Booksy + Bing Maps" },
+    "geo": { "lat": 40.446815, "lng": -3.667668, "verified": true, "source": "Bing Maps (ficha La ruta del barbero (Clara del Rey))" },
+    "phone": { "value": null, "display": null, "verified": false, "note": "NO VERIFICADO. Sin numero confirmado no se renderizan los enlaces de llamada. Rellenar con formato +34XXXXXXXXX y display '91 XXX XX XX'." },
     "whatsapp": { "value": null, "verified": false, "note": "NO VERIFICADO. Sin numero confirmado el boton de WhatsApp NO se renderiza. Rellenar con formato +34XXXXXXXXX." },
     "email": { "value": null, "verified": false },
-    "maps_url": { "value": "https://www.google.com/maps/search/?api=1&query=Susana+Dibr%C3%A9+Av.+del+Llano+27+Gij%C3%B3n", "verified": false, "note": "Enlace de busqueda generico. Sustituir por el enlace corto del perfil real de Google Business." }
+    "maps_url": { "value": "https://www.google.com/maps/search/?api=1&query=La+Ruta+del+Barbero+Calle+de+Clara+del+Rey+58+28002+Madrid", "verified": false, "note": "Enlace de busqueda generico. Sustituir por el enlace corto del perfil real de Google Business." },
+    "maps_embed": "https://www.google.com/maps?q=40.446815,-3.667668&z=17&output=embed"
   },
 
   "hours": {
     "verified": false,
-    "note": "INFERENCIA. Booksy muestra jornada partida (10-14 / 16-20). Fresha muestra 10-20 continuado. CONFIRMAR con el negocio antes de publicar.",
+    "note": "Horario publicado en Booksy segun buscadores (L-V 10-21, S 10-15). CONFIRMAR con el negocio antes de publicar.",
     "week": [
-      { "day": "Lunes", "slots": ["10:00–14:00", "16:00–20:00"] },
-      { "day": "Martes", "slots": ["10:00–14:00", "16:00–20:00"] },
-      { "day": "Miércoles", "slots": ["10:00–14:00", "16:00–20:00"] },
-      { "day": "Jueves", "slots": ["10:00–14:00", "16:00–20:00"] },
-      { "day": "Viernes", "slots": ["10:00–14:00", "16:00–20:00"] },
-      { "day": "Sábado", "slots": [] },
+      { "day": "Lunes", "slots": ["10:00–21:00"] },
+      { "day": "Martes", "slots": ["10:00–21:00"] },
+      { "day": "Miércoles", "slots": ["10:00–21:00"] },
+      { "day": "Jueves", "slots": ["10:00–21:00"] },
+      { "day": "Viernes", "slots": ["10:00–21:00"] },
+      { "day": "Sábado", "slots": ["10:00–15:00"] },
       { "day": "Domingo", "slots": [] }
     ]
   },
 
   "booking": {
     "provider": "booksy",
-    "url": "https://booksy.com/es-es/174197_susana-dibre_medicina-estetica_76596_gijon",
+    "url": "https://booksy.com/es-es/103123_la-ruta-del-barbero-clara-del-rey_barberia_53009_madrid",
     "label": "Reservar en Booksy",
-    "widget": { "enabled": false, "note": "Booksy ofrece boton/widget oficial desde Booksy Biz > Marketing. Si el negocio lo facilita, pegar aqui el snippet y activar. Mientras tanto: enlace directo (Opcion 3 del brief)." }
+    "widget": { "enabled": false, "url": "https://booksy.com/es-es/instant-experiences/widget/103123", "note": "Widget oficial de Booksy del negocio. Mientras no se active se usa el enlace directo al perfil." }
   },
 
   "social": {
-    "instagram": { "value": "https://www.instagram.com/susana_dibre/", "handle": "@susana_dibre", "verified": true, "source": "Booksy" },
+    "instagram": { "value": "https://www.instagram.com/rutadelbarbero/", "handle": "@rutadelbarbero", "verified": false, "note": "Cuenta encontrada en buscadores. CONFIRMAR con el negocio que es la suya." },
     "facebook": { "value": null, "verified": false }
   },
 
   "reputation": {
-    "booksy": { "rating": 5.0, "count": 130, "verified": true, "source": "Booksy, consultado 2026-09-02", "label": "en Booksy" },
-    "google": { "rating": null, "count": null, "verified": false, "note": "Agregadores de terceros mencionan 4,9 pero no esta verificado en Google. NO publicar hasta comprobarlo en el perfil real." }
+    "booksy": { "rating": 4.9, "count": 273, "verified": true, "source": "Booksy, consultado 2026-09-30", "label": "en Booksy" },
+    "google": { "rating": null, "count": null, "verified": false, "note": "NO publicar hasta comprobarlo en el perfil real de Google." }
   },
 
   "team": {
-    "verified": true,
-    "source": "Booksy",
-    "members": [
-      { "name": "Susana Diez", "role": null },
-      { "name": "Lorena", "role": null },
-      { "name": "Yeffrey", "role": null }
-    ],
-    "note": "Nombres verificados. Los roles/especialidades NO estan verificados: rellenar con el negocio."
+    "verified": false,
+    "members": [],
+    "note": "Nombres de los barberos NO verificados. Rellenar con { name, role } cuando el negocio los facilite; mientras tanto la seccion muestra un texto generico."
   },
 
-  "brands": {
+  "highlights": {
     "verified": true,
-    "source": "Booksy (nombres de servicio) + Paginas Amarillas",
-    "list": ["Alqvimia", "Matis"]
+    "source": "Booksy (descripcion de servicios)",
+    "list": [
+      { "title": "Navaja", "desc": "Perfilado de contornos, barba y cejas a navaja, como se ha hecho siempre." },
+      { "title": "Premium", "desc": "Afeitado tradicional con brocha, vaporizador de ozono, masaje e hidratación de piel y barba." }
+    ]
   },
 
   "site": {
-    "domain": "https://www.susanadibre.es",
+    "domain": "https://www.larutadelbarbero.es",
+    "_domain_note": "Dominio provisional: CONFIRMAR que es el dominio contratado por el negocio antes de publicar.",
     "lang_default": "es",
     "langs": ["es"],
     "langs_planned": ["en"],
-    "panel_domain": "https://panel.susanadibre.es"
+    "panel_domain": "https://panel.larutadelbarbero.es"
   },
 
   "analytics": {
