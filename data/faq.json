@@ -43,6 +43,14 @@
       "review": true
     },
     {
+      "id": "quien",
+      "q": "¿Quién me va a cortar?",
+      "a": "El equipo de la barbería: Juan, con 14 años de oficio y especialista en tijera y visagismo; Alejandro, especialista en degradados; y Abel. Al reservar en Booksy eliges con quién quieres la cita.",
+      "tags": ["quien", "barbero", "equipo", "juan", "alejandro", "abel", "elegir", "profesional"],
+      "category": "La barbería",
+      "review": false
+    },
+    {
       "id": "precios",
       "q": "¿Cuánto cuesta un corte?",
       "a": "El corte de pelo cuesta 18 € y el corte con arreglo de barba, 28 €. Niños hasta 12 años, 15 €, y jubilados, 11 €. Todos los precios están publicados en esta web y en Booksy.",

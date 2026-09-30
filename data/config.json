@@ -21,7 +21,9 @@
     "whatsapp": { "value": null, "verified": false, "note": "NO VERIFICADO. Sin numero confirmado el boton de WhatsApp NO se renderiza. Rellenar con formato +34XXXXXXXXX." },
     "email": { "value": null, "verified": false },
     "maps_url": { "value": "https://www.google.com/maps/search/?api=1&query=La+Ruta+del+Barbero+Calle+de+Clara+del+Rey+58+28002+Madrid", "verified": false, "note": "Enlace de busqueda generico. Sustituir por el enlace corto del perfil real de Google Business." },
-    "maps_embed": "https://www.google.com/maps?q=40.446815,-3.667668&z=17&output=embed"
+    "maps_embed": "https://maps.google.com/maps?q=La%20Ruta%20del%20Barbero%2C%20Calle%20de%20Clara%20del%20Rey%2058%2C%2028002%20Madrid&ll=40.446815,-3.667668&z=17&hl=es&output=embed",
+    "directions_url": "https://www.google.com/maps/dir/?api=1&destination=40.446815,-3.667668",
+    "bing_url": "https://www.bing.com/maps?ss=id.ypid%3AYND1710F09324F2286&cp=40.446815~-3.667668&lvl=17"
   },
 
   "hours": {
@@ -56,9 +58,14 @@
   },
 
   "team": {
-    "verified": false,
-    "members": [],
-    "note": "Nombres de los barberos NO verificados. Rellenar con { name, role } cuando el negocio los facilite; mientras tanto la seccion muestra un texto generico."
+    "verified": true,
+    "source": "Booksy, selector de profesional del perfil 103123 (consultado via buscadores 2026-09-30)",
+    "note": "Especialidades tal como las describe Booksy. Abel no tiene descripcion publicada: pedirsela al negocio.",
+    "members": [
+      { "name": "Juan", "role": "Tijera y visagismo", "bio": "14 años de oficio. Estudia la forma de tu cara antes de coger la tijera, domina los degradados precisos y cuida cada detalle para que el corte vaya con tu estilo." },
+      { "name": "Alejandro", "role": "Especialista en degradados", "bio": "Nivel profesional en fades. Cortes precisos, personalizados y con un acabado de mucha calidad." },
+      { "name": "Abel", "role": "Barbero", "bio": null }
+    ]
   },
 
   "highlights": {

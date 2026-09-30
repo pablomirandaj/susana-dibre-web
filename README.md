@@ -93,7 +93,8 @@ confirmar** y aparecen listados al final de cada compilación:
 | Teléfono | Sin número. Mientras no lo haya, no se generan enlaces de llamada |
 | Horario | L-V 10:00–21:00 y S 10:00–15:00 según Booksy (vía buscadores). Confirmar |
 | Instagram | @rutadelbarbero, encontrado en buscadores. Confirmar que es la cuenta del negocio |
-| Equipo | Sin nombres de barberos. La sección muestra un texto genérico |
+| Equipo | Juan, Alejandro y Abel, sacados de Booksy. Falta la descripción de Abel |
+| Estilo de Instagram | No se pudo consultar @rutadelbarbero desde el entorno de desarrollo. Revisar paleta y fotos con su perfil |
 | Razón social | Desconocida. El pie y los legales usan el nombre comercial |
 | Dominio | `larutadelbarbero.es` es provisional |
 | Duración de color y extras | No visible en la consulta. Completar desde Booksy |

@@ -43,6 +43,7 @@ const PHONE = val(cfg.contact.phone);
 const PHONE_TXT = cfg.contact.phone.display;
 const WA = val(cfg.contact.whatsapp);
 const MAPS = val(cfg.contact.maps_url);
+const RUTA = cfg.contact.directions_url || MAPS;
 const IG = val(cfg.social.instagram);
 const ADDR = cfg.contact.address;
 const GEO = cfg.contact.geo;
@@ -78,7 +79,7 @@ function head({ title, desc, url, extraSchema = "" }) {
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Karla:wght@400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 ${extraSchema}
 </head>
@@ -110,7 +111,7 @@ function barraMovil() {
     ? `<a class="btn btn--linea" href="https://wa.me/${WA.replace(/\D/g, "")}" target="_blank" rel="noopener" data-evento="whatsapp_click" data-origen="barra_movil">WhatsApp</a>`
     : PHONE
     ? `<a class="btn btn--linea" href="tel:${PHONE}" data-evento="phone_click" data-origen="barra_movil">Llamar</a>`
-    : `<a class="btn btn--linea" href="${MAPS}" target="_blank" rel="noopener" data-evento="maps_click" data-origen="barra_movil">Cómo llegar</a>`;
+    : `<a class="btn btn--linea" href="${RUTA}" target="_blank" rel="noopener" data-evento="maps_click" data-origen="barra_movil">Cómo llegar</a>`;
   return `
 <div class="barra-movil">
   ${wa}
@@ -280,8 +281,9 @@ function portada() {
 <section class="hero">
   <div class="wrap hero__grid">
     <div>
+      <p class="antetitulo">Barbería · Clara del Rey 58 · Madrid</p>
       <h1>Cortes con oficio, barbas a <em>navaja</em>.</h1>
-      <p class="hero__texto">Barbería de barrio en Clara del Rey, Madrid. Corte clásico y degradado, arreglo de barba, afeitado tradicional premium con ozono y masaje, y cita online con la agenda real de la barbería.</p>
+      <p class="hero__texto">Degradados que se miden al milímetro, barbas perfiladas a navaja y un afeitado premium con ozono y masaje para salir nuevo. Los mismos barberos de siempre en Clara del Rey, ahora con nombre propio.</p>
       <div class="hero__acciones">
         <a class="btn btn--miel" href="${BOOKSY}" target="_blank" rel="noopener" data-evento="booking_click" data-origen="hero">Reservar cita</a>
         <a class="btn btn--claro" href="#servicios">Ver servicios y precios</a>
@@ -292,12 +294,17 @@ function portada() {
   </div>
 </section>
 
+<div class="franja" aria-hidden="true">
+  <div class="franja__texto">${["Degradados", "Navaja", "Afeitado tradicional", "Barba premium", "Clara del Rey 58"].map((t) => `<span>${t}</span>`).join("")}</div>
+</div>
+
 <section class="seccion" id="centro">
   <div class="wrap relato">
     <div>
-      <h2 class="titulo-seccion">Una barbería de las de siempre, en Clara del Rey.</h2>
-      <p>${esc(NOMBRE)} está en la Calle de Clara del Rey, 58, en el barrio de Prosperidad. Aquí se viene a cortarse el pelo bien y sin prisas: cada corte se adapta al estilo de quien se sienta en el sillón.</p>
-      <p>La carta va del corte rápido a máquina al servicio premium de una hora, con afeitado tradicional, ozono, masaje e hidratación. Hay precio propio para niños y jubilados, y todo se reserva en la misma agenda, con la disponibilidad real de la barbería.</p>
+      <p class="antetitulo antetitulo--oscuro">La casa</p>
+      <h2 class="titulo-seccion">Mismo sillón, mismas manos, nombre nuevo.</h2>
+      <p>En el 58 de Clara del Rey se lleva años cortando el pelo al barrio de Prosperidad. El equipo decidió seguir por su cuenta y le puso nombre a lo que ya hacía: <strong>${esc(NOMBRE)}</strong>. Cambia el rótulo; el oficio, la navaja y los clientes de siempre se quedan.</p>
+      <p>Aquí no hay cortes en serie. Primero se mira la cara, el pelo y cómo lo llevas; después se decide. La carta va del repaso rápido a máquina al premium de una hora con afeitado tradicional, ozono, masaje e hidratación, con precio propio para peques y jubilados.</p>
     </div>
     <dl class="relato__marcas">
       ${cfg.highlights.list.map((h) => `<dt>${esc(h.title)}</dt><dd>${esc(h.desc)}</dd>`).join("\n      ")}
@@ -308,8 +315,8 @@ function portada() {
 <section class="seccion seccion--piedra" id="servicios">
   <div class="wrap">
     <div class="seccion__cabeza">
-      <h2>Servicios y precios</h2>
-      <p>Precios y duraciones tal y como están publicados en la agenda de la barbería. Si quieres darte el capricho completo, el corte con barba premium lo reúne todo en una hora.</p>
+      <h2>La carta</h2>
+      <p>Precios y duraciones tal y como están en la agenda de la barbería, sin letra pequeña. ¿Te quieres dar el capricho? El corte con barba premium lo tiene todo en una hora.</p>
     </div>
     ${carta}
     <div class="bloque-suelto">${bloqueDestacado()}</div>
@@ -319,11 +326,17 @@ function portada() {
 <section class="seccion" id="equipo">
   <div class="wrap">
     <div class="seccion__cabeza">
-      <h2>Quién te atiende</h2>
-      <p>${cfg.team.members.length ? "Al reservar puedes elegir con qué barbero quieres la cita." : "Un equipo de barberos profesionales. Al reservar en Booksy puedes elegir con quién quieres la cita."}</p>
+      <h2>Quién te corta</h2>
+      <p>Cada barbero tiene su mano. Elige con quién quieres la cita al reservar en Booksy, o déjate aconsejar.</p>
     </div>
     ${cfg.team.members.length ? `<ul class="equipo">
-      ${cfg.team.members.map((m) => `<li><span class="equipo__nombre">${esc(m.name)}</span></li>`).join("")}
+      ${cfg.team.members.map((m) => `<li class="barbero">
+        <span class="barbero__inicial" aria-hidden="true">${esc(m.name.charAt(0))}</span>
+        <h3 class="barbero__nombre">${esc(m.name)}</h3>
+        ${m.role ? `<p class="barbero__rol">${esc(m.role)}</p>` : ""}
+        ${m.bio ? `<p class="barbero__bio">${esc(m.bio)}</p>` : ""}
+        <a class="barbero__reservar" href="${BOOKSY}" target="_blank" rel="noopener" data-evento="booking_click" data-origen="equipo" data-servicio="${esc("Barbero: " + m.name)}">Reservar con ${esc(m.name)} →</a>
+      </li>`).join("\n      ")}
     </ul>` : ""}
   </div>
 </section>
@@ -331,7 +344,7 @@ function portada() {
 <section class="seccion seccion--piedra" id="galeria">
   <div class="wrap">
     <div class="seccion__cabeza">
-      <h2>La barbería y los cortes</h2>
+      <h2>Del sillón a la calle</h2>
       <p>Las fotografías se aprueban desde el panel del negocio. Hasta entonces esta sección queda marcada como pendiente.</p>
     </div>
     <div class="galeria" id="galeria">
@@ -361,7 +374,7 @@ function portada() {
   <div class="wrap">
     <div class="seccion__cabeza">
       <h2>Cómo llegar</h2>
-      <p>En el barrio de ${esc(cfg.business.neighborhood)}, ${esc(cfg.business.city)}.</p>
+      <p>Calle de Clara del Rey, 58, en pleno barrio de ${esc(cfg.business.neighborhood)}. Reserva tu hueco y te esperamos en el sillón.</p>
     </div>
     <div class="visita">
       <div>
@@ -376,9 +389,15 @@ function portada() {
         </dl>
         <ul class="horario">${horas}</ul>
       </div>
-      <iframe class="mapa" loading="lazy" title="Mapa de situación de ${esc(NOMBRE)}"
-        src="${cfg.contact.maps_embed}"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="mapa-caja">
+        <iframe class="mapa" loading="lazy" title="Mapa de situación de ${esc(NOMBRE)} en ${esc(DIR_TXT)}"
+          src="${cfg.contact.maps_embed}"
+          allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="mapa__acciones">
+          <a class="btn btn--miel" href="${RUTA}" target="_blank" rel="noopener" data-evento="maps_click" data-origen="mapa_ruta">Cómo llegar</a>
+          <a class="btn btn--linea" href="${MAPS}" target="_blank" rel="noopener" data-evento="maps_click" data-origen="mapa_abrir">Abrir en Google Maps</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
