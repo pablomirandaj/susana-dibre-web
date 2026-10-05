@@ -68,6 +68,15 @@
     ]
   },
 
+  "brand": {
+    "verified": false,
+    "source": "Instagram @rutadelbarbero",
+    "note": "Imagenes en public/img/. logo = foto de perfil de Instagram (cuadrada). hero = foto principal. gallery = lista de { src, alt }. Con null o lista vacia se muestran los huecos rayados.",
+    "logo": null,
+    "hero": null,
+    "gallery": []
+  },
+
   "highlights": {
     "verified": true,
     "source": "Booksy (descripcion de servicios)",

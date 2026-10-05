@@ -90,6 +90,8 @@ a { color: inherit; }
   font-family: var(--serif); font-size: 1.3rem; letter-spacing: -.02em;
   text-decoration: none; margin-right: auto; white-space: nowrap;
 }
+.marca--logo { display: grid; grid-template-columns: auto 1fr; column-gap: .7rem; align-items: center; }
+.marca__logo { grid-row: span 2; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
 .marca span { display: block; font-family: var(--sans); font-size: .68rem; letter-spacing: .1em; color: var(--musgo); text-transform: uppercase; }
 
 .nav { display: flex; gap: 1.6rem; }
@@ -244,6 +246,8 @@ a { color: inherit; }
 .galeria { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
 @media (min-width: 760px) { .galeria { grid-template-columns: repeat(4, 1fr); } }
 .galeria > * { aspect-ratio: 1; }
+.galeria img { width: 100%; height: 100%; object-fit: cover; }
+.hero__foto img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ------------------------------------------------------------------- faq */
 .buscador { position: relative; max-width: 30rem; margin-bottom: 2rem; }

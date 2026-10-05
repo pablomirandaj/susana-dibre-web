@@ -44,6 +44,8 @@ const PHONE_TXT = cfg.contact.phone.display;
 const WA = val(cfg.contact.whatsapp);
 const MAPS = val(cfg.contact.maps_url);
 const RUTA = cfg.contact.directions_url || MAPS;
+const BRAND = cfg.brand || {};
+const OG_IMG = BRAND.hero || BRAND.logo;
 const IG = val(cfg.social.instagram);
 const ADDR = cfg.contact.address;
 const GEO = cfg.contact.geo;
@@ -76,6 +78,7 @@ function head({ title, desc, url, extraSchema = "" }) {
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
+${OG_IMG ? `<meta property="og:image" content="${DOMAIN}${OG_IMG}">` : ""}
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,7 +95,7 @@ function header() {
   return `
 <header class="cabecera">
   <div class="wrap cabecera__fila">
-    <a class="marca" href="/">${esc(NOMBRE)}<span>${esc(cfg.business.short_location)}</span></a>
+    <a class="marca${BRAND.logo ? " marca--logo" : ""}" href="/">${BRAND.logo ? `<img class="marca__logo" src="${BRAND.logo}" alt="" width="44" height="44">` : ""}${esc(NOMBRE)}<span>${esc(cfg.business.short_location)}</span></a>
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="/#centro">La barbería</a>
       <a href="/#servicios">Servicios</a>
@@ -290,7 +293,9 @@ function portada() {
       </div>
       <p class="prueba"><b>${String(rep.rating).replace(".", ",")}</b> sobre 5 · ${rep.count} reseñas de clientes verificadas en Booksy</p>
     </div>
-    <div class="hero__foto foto-pendiente">Foto de la barbería<br>pendiente de autorización</div>
+    ${BRAND.hero
+      ? `<div class="hero__foto"><img src="${BRAND.hero}" alt="Interior de ${esc(NOMBRE)}" loading="eager"></div>`
+      : `<div class="hero__foto foto-pendiente">Foto de la barbería<br>pendiente de autorización</div>`}
   </div>
 </section>
 
@@ -345,10 +350,14 @@ function portada() {
   <div class="wrap">
     <div class="seccion__cabeza">
       <h2>Del sillón a la calle</h2>
-      <p>Las fotografías se aprueban desde el panel del negocio. Hasta entonces esta sección queda marcada como pendiente.</p>
+      <p>${(BRAND.gallery || []).length
+        ? `Algunos trabajos recientes. Hay más en <a href="${IG}" target="_blank" rel="noopener" data-evento="instagram_click" data-origen="galeria">Instagram ${esc(cfg.social.instagram.handle || "")}</a>.`
+        : "Las fotografías se aprueban desde el panel del negocio. Hasta entonces esta sección queda marcada como pendiente."}</p>
     </div>
     <div class="galeria" id="galeria">
-      ${Array.from({ length: 4 }, () => `<div class="foto-pendiente">Foto pendiente</div>`).join("")}
+      ${(BRAND.gallery || []).length
+        ? BRAND.gallery.map((g) => `<img src="${g.src}" alt="${esc(g.alt || "")}" loading="lazy">`).join("")
+        : Array.from({ length: 4 }, () => `<div class="foto-pendiente">Foto pendiente</div>`).join("")}
     </div>
   </div>
 </section>
